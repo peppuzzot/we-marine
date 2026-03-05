@@ -11,15 +11,18 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
 
+  <!-- Tailwind CSS (compiled) -->
+  <link rel="stylesheet" href="../assets/css/tailwind.css" />
+
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">WEMARINE</a>
+      <a class="navbar-brand fw-bold" href="index.html"><img class="logo" src="../assets/img/logo-web.png"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu">
@@ -29,16 +32,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="service.html">Servizi</a>
+            <a class="nav-link" href="service.html">Servizi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">Chi siamo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
+            <a class="nav-link" href="pages/">Contatti</a>
           </li>
           <li class="nav-item ms-lg-3">
             <a class="btn btn-outline-light btn-sm fw-semibold" href="contatti.html#contact-form">Richiedi assistenza</a>

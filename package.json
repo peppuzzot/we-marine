@@ -1,0 +1,17 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Sito web vetrina statico del progetto WeMarine.",
+  "main": "index.js",
+  "scripts": {
+    "tw:build": "npx @tailwindcss/cli -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify",
+    "tw:watch": "npx @tailwindcss/cli -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
