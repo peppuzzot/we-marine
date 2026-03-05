@@ -1,0 +1,171 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa; /* Light background */
+    scroll-behavior: smooth; /* For smooth scrolling */
+    padding-top: 70px; /* Adjust for fixed navbar height */
+}
+
+/* Navbar Styles */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* White text for dark navbar */
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #e9ecef; /* Slightly off-white on hover/active */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* Ensure brand name is white */
+}
+
+.navbar-wemarine{
+  background-color: #0b2a4a; /* cambia qui il colore */
+}
+
+/* Hero Section */
+#hero{
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* immagine */
+.hero-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* overlay */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 30, 60, 0.65);
+  z-index: 1;
+}
+
+/* contenuto sopra tutto */
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
+
+#hero h1 {
+    font-size: 4rem; /* Larger font size for hero heading */
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Page hero specifico per Chi Siamo */
+.page-hero-about{
+  background: url("../img/about-hero.jpg") center/cover no-repeat;
+}
+
+/* Page Header Sections (for Services, About, Contact) */
+.page-header-section {
+    position: relative;
+    background-image: url('../images/page-header-bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Shorter height than hero */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 40, 70, 0.8); /* Slightly darker blue overlay */
+}
+
+.page-header-section h1 {
+    font-size: 3.5rem;
+}
+
+/* Service Card Styles */
+.card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body i {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+/* Icon Styles */
+.text-primary {
+    color: #007bff !important; /* Ensure primary color is consistent */
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: #212529; /* Dark background */
+    color: #adb5bd; /* Light grey text */
+}
+
+.footer-section h5 {
+    color: #ffffff; /* White headings in footer */
+    margin-bottom: 20px;
+}
+
+.footer-section a {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.social-icons a {
+    font-size: 1.5rem; /* Larger social icons */
+}
+
+/* Form Styles */
+#contact-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+#contact-form .form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.logo{
+  height: 50px;   /* controlli solo l'altezza */
+  width: auto;    /* mantiene proporzione */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Smaller padding for smaller navbars */
+    }
+
+    #hero h1 {
+        font
