@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">WEMARINE</a>
+      <a class="navbar-brand fw-bold" href="index.html"><img class="logo" src="../assets/img/logo-web.png"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu">
@@ -29,16 +29,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="service.html">Servizi</a>
+            <a class="nav-link" href="./service.html">Servizi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="about.html">Chi siamo</a>
+            <a class="nav-link" href="about.html">Chi siamo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
+            <a class="nav-link" href="./contact.html">Contatti</a>
           </li>
           <li class="nav-item ms-lg-3">
             <a class="btn btn-outline-light btn-sm fw-semibold" href="contatti.html#contact-form">Richiedi assistenza</a>
@@ -48,147 +48,116 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="page-hero page-hero-about d-flex align-items-center text-center text-white">
-    <div class="page-hero-overlay"></div>
-    <div class="container position-relative" data-reveal>
-      <h1 class="display-5 fw-bold mb-2 text-secondary">Chi siamo</h1>
-      <p class="lead mb-0 mx-auto page-hero-lead text-secondary">
-        Competenza, affidabilità e passione per il mare: servizi nautici curati nei dettagli.
-      </p>
+  <!-- PAGE HEADER -->
+<section class="page-header-section page-hero-about">
+  <div class="page-header-overlay"></div>
+  <div class="container position-relative text-center text-white">
+    <h1 class="fw-bold">Chi siamo</h1>
+    <p class="lead mb-0">
+      Specializzati nei tubolari per gommoni e imbarcazioni pneumatiche.
+    </p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Un servizio specifico, non generico</h2>
+    <p class="text-muted mx-auto" style="max-width: 750px;">
+      We Marine nasce con un focus preciso: lavorare esclusivamente sui tubolari.
+      Non ci occupiamo di nautica in generale, ma di interventi mirati sulle parti gonfiabili,
+      offrendo soluzioni tecniche affidabili e su misura.
+    </p>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-md-6">
+        <img src="../assets/img/dipendente-a-lavoro.png" alt="Lavorazioni su tubolari" class="img-fluid rounded-4 shadow-sm">
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Chi è We Marine</h2>
+        <p class="text-muted">
+          We Marine è una realtà specializzata negli interventi su tubolari per gommoni e imbarcazioni pneumatiche.
+          Lavoriamo con clienti privati e aziende, offrendo servizi che vanno dalla riparazione fino alla sostituzione completa e al retubing.
+        </p>
+        <p class="text-muted">
+          Il nostro approccio è tecnico e diretto: analizziamo ogni situazione e proponiamo soluzioni concrete,
+          senza interventi inutili o generici.
+        </p>
+      </div>
+
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- About Content -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-md-6" data-reveal>
-          <h2 class="fw-bold mb-3">La nostra missione</h2>
-          <p class="text-muted">
-            In WEMARINE lavoriamo per offrire servizi nautici di alto livello, con un approccio serio e trasparente.
-            Il nostro obiettivo è diventare il punto di riferimento per armatori e clienti che cercano qualità,
-            sicurezza e interventi fatti bene.
-          </p>
+<!-- COME LAVORIAMO -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Come lavoriamo</h2>
 
-          <h2 class="fw-bold mt-4 mb-3">Esperienza sul campo</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="p-4">
+          <h5 class="fw-bold mb-2">Analisi precisa</h5>
           <p class="text-muted mb-0">
-            Siamo un team di professionisti con esperienza in riparazioni, manutenzione, assistenza motore e refit.
-            Conosciamo le sfide dell’ambiente marino e affrontiamo ogni lavoro con precisione, materiali adeguati
-            e attenzione ai dettagli, per risultati duraturi nel tempo.
+            Valutiamo lo stato dei tubolari e le reali esigenze del cliente.
           </p>
         </div>
+      </div>
 
-        <div class="col-md-6" data-reveal>
-          <!-- Sostituisci con una foto reale -->
-          <img src="assets/img/professional-team.jpg" alt="Team WEMARINE" class="img-fluid rounded-4 shadow-lg">
-          <p class="fst-italic mt-3 text-muted mb-0">Il nostro team è pronto ad assisterti.</p>
+      <div class="col-md-4">
+        <div class="p-4">
+          <h5 class="fw-bold mb-2">Intervento mirato</h5>
+          <p class="text-muted mb-0">
+            Eseguiamo lavorazioni specifiche, evitando soluzioni generiche.
+          </p>
         </div>
       </div>
+
+      <div class="col-md-4">
+        <div class="p-4">
+          <h5 class="fw-bold mb-2">Risultato affidabile</h5>
+          <p class="text-muted mb-0">
+            Puntiamo a garantire durata, sicurezza e qualità nel tempo.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Values -->
-  <section class="py-5">
-    <div class="container">
-      <div class="text-center mb-5" data-reveal>
-        <h2 class="fw-bold">I nostri valori</h2>
-        <p class="text-muted mb-0">Tre pilastri che guidano il nostro lavoro ogni giorno.</p>
-      </div>
+<!-- CTA -->
+<section class="py-5 text-white" style="background-color: #0b2a4a;">
+  <div class="container text-center">
 
-      <div class="row g-4 text-center">
-        <div class="col-md-4" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <i class="fa-solid fa-user-shield fa-3x text-wemarine mb-3"></i>
-            <h5 class="fw-bold mb-2">Competenza</h5>
-            <p class="text-muted mb-0">Tecnici qualificati e approccio professionale su ogni intervento.</p>
-          </div>
-        </div>
+    <h2 class="fw-bold mb-3">
+      Hai bisogno di un intervento sui tubolari?
+    </h2>
 
-        <div class="col-md-4" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <i class="fa-solid fa-clock fa-3x text-wemarine mb-3"></i>
-            <h5 class="fw-bold mb-2">Affidabilità</h5>
-            <p class="text-muted mb-0">Tempistiche chiare, lavorazioni curate e comunicazione semplice.</p>
-          </div>
-        </div>
+    <p class="lead mb-4">
+      Contattaci per ricevere informazioni o una valutazione.
+    </p>
 
-        <div class="col-md-4" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <i class="fa-solid fa-heart fa-3x text-wemarine mb-3"></i>
-            <h5 class="fw-bold mb-2">Passione</h5>
-            <p class="text-muted mb-0">Amore per il mare e attenzione ai dettagli che fanno la differenza.</p>
-          </div>
-        </div>
-      </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank">
+        Scrivici su WhatsApp
+      </a>
+
+      <a href="contatti.html" class="btn btn-outline-light btn-lg fw-bold">
+        Vai ai contatti
+      </a>
     </div>
-  </section>
 
-  <!-- Our Approach -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5" data-reveal>
-        <h2 class="fw-bold">Come lavoriamo</h2>
-        <p class="text-muted mb-0">Un processo semplice, chiaro e orientato al risultato.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-3" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="badge rounded-pill text-bg-light border">1</span>
-              <h6 class="fw-bold mb-0">Ispezione</h6>
-            </div>
-            <p class="text-muted mb-0">Analisi del problema e verifica tecnica iniziale.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="badge rounded-pill text-bg-light border">2</span>
-              <h6 class="fw-bold mb-0">Preventivo</h6>
-            </div>
-            <p class="text-muted mb-0">Proposta chiara con interventi, materiali e tempi.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="badge rounded-pill text-bg-light border">3</span>
-              <h6 class="fw-bold mb-0">Lavorazione</h6>
-            </div>
-            <p class="text-muted mb-0">Esecuzione con cura e aggiornamenti durante il lavoro.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3" data-reveal>
-          <div class="p-4 rounded-4 border bg-white h-100 card-hover">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="badge rounded-pill text-bg-light border">4</span>
-              <h6 class="fw-bold mb-0">Consegna</h6>
-            </div>
-            <p class="text-muted mb-0">Controllo finale e consegna in condizioni ottimali.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-5">
-    <div class="container" data-reveal>
-      <div class="p-4 p-md-5 rounded-4 border bg-white d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 card-hover">
-        <div>
-          <h3 class="fw-bold mb-1">Vuoi parlarci del tuo intervento?</h3>
-          <p class="text-muted mb-0">Contattaci e ti rispondiamo rapidamente.</p>
-        </div>
-        <a href="contatti.html#contact-form" class="btn btn-wemarine btn-lg fw-bold">Contattaci</a>
-      </div>
-    </div>
-  </section>
-
+  </div>
+</section>
   <!-- Footer -->
   <footer class="footer-section text-white py-5">
     <div class="container">

@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">WEMARINE</a>
+      <a class="navbar-brand fw-bold" href="index.html"><img class="logo" src="../assets/img/logo-web.png"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu">
@@ -29,16 +29,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="service.html">Servizi</a>
+            <a class="nav-link" href="./service.html">Servizi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">Chi siamo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
+            <a class="nav-link" href="contact.html">Contatti</a>
           </li>
           <li class="nav-item ms-lg-3">
             <a class="btn btn-outline-light btn-sm fw-semibold" href="contatti.html#contact-form">Richiedi assistenza</a>
@@ -48,131 +48,166 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="page-hero d-flex align-items-center text-center text-white">
-    <div class="page-hero-overlay"></div>
-    <div class="container position-relative" data-reveal>
-      <h1 class="display-5 fw-bold mb-2 text-secondary">Servizi</h1>
-      <p class="lead mb-0 mx-auto page-hero-lead text-secondary">
-        Interventi professionali per riparazioni, manutenzione e assistenza tecnica.
-        Soluzioni complete per barche e yacht.
-      </p>
-    </div>
-  </header>
+  <!-- PAGE HEADER -->
+<section class="page-header-section">
+  <div class="page-header-overlay"></div>
+  <div class="container position-relative text-center text-white">
+    <h1 class="fw-bold">Servizi</h1>
+    <p class="lead mb-0">
+      Interventi specializzati sui tubolari per gommoni e imbarcazioni pneumatiche.
+    </p>
+  </div>
+</section>
 
-  <!-- Services Details -->
-  <section class="py-5 bg-light">
-    <div class="container">
+<!-- INTRO -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Soluzioni specifiche per ogni esigenza</h2>
+    <p class="text-muted mx-auto" style="max-width: 750px;">
+      We Marine offre servizi dedicati esclusivamente ai tubolari, con interventi mirati e lavorazioni su misura
+      per garantire affidabilità, sicurezza e durata nel tempo.
+    </p>
+  </div>
+</section>
 
-      <!-- 1) Riparazioni -->
-      <div class="row align-items-center g-4 mb-5">
-        <div class="col-md-7" data-reveal>
-          <h2 class="fw-bold mb-3">Riparazioni barche</h2>
-          <p class="text-muted">
-            Dalle piccole riparazioni alle lavorazioni più complesse: interveniamo su scafo, coperta e impianti
-            per ripristinare sicurezza, affidabilità e finitura.
-          </p>
+<!-- SERVIZI DETTAGLIO -->
+<section class="py-5 bg-light">
+  <div class="container">
 
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Riparazioni scafo e chiglia</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Vetroresina e gelcoat</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Valutazione danni e interventi mirati</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Ripristino ferramenta e componenti</li>
-          </ul>
-        </div>
+    <div class="row g-4">
 
-        <div class="col-md-5 text-center" data-reveal>
-          <i class="fa-solid fa-screwdriver-wrench fa-7x text-muted opacity-25"></i>
-        </div>
-      </div>
-
-      <hr class="my-5">
-
-      <!-- 2) Manutenzione -->
-      <div class="row align-items-center g-4 mb-5 flex-row-reverse">
-        <div class="col-md-7" data-reveal>
-          <h2 class="fw-bold mb-3">Manutenzione yacht</h2>
-          <p class="text-muted">
-            Programmi di manutenzione ordinaria e straordinaria per preservare valore e performance:
-            controlli, pulizia, trattamenti e verifiche di bordo.
-          </p>
-
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Ispezioni programmate</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Pulizia scafo e trattamenti</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Dettagli interni/esterni</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Check impianti (elettrico, idrico, ecc.)</li>
-          </ul>
-        </div>
-
-        <div class="col-md-5 text-center" data-reveal>
-          <i class="fa-solid fa-ship fa-7x text-muted opacity-25"></i>
+      <!-- RIPARAZIONE -->
+      <div class="col-md-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3">Riparazione tubolari</h4>
+            <p class="text-muted">
+              Interventi mirati su danni localizzati, usura o problemi delle parti gonfiabili.
+              Analizziamo lo stato del tubolare e interveniamo con soluzioni precise per ripristinare funzionalità e sicurezza.
+            </p>
+          </div>
         </div>
       </div>
 
-      <hr class="my-5">
-
-      <!-- 3) Motori -->
-      <div class="row align-items-center g-4 mb-5">
-        <div class="col-md-7" data-reveal>
-          <h2 class="fw-bold mb-3">Diagnosi e assistenza motore</h2>
-          <p class="text-muted">
-            Diagnosi, manutenzione e riparazioni su motori marini e sistemi correlati.
-            Interveniamo per ridurre fermi, consumi e problemi ricorrenti.
-          </p>
-
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Tagliandi e manutenzione</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Diagnosi guasti</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Impianto carburante</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Raffreddamento e controlli</li>
-          </ul>
-        </div>
-
-        <div class="col-md-5 text-center" data-reveal>
-          <i class="fa-solid fa-gears fa-7x text-muted opacity-25"></i>
+      <!-- SOSTITUZIONE -->
+      <div class="col-md-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3">Sostituzione tubolari</h4>
+            <p class="text-muted">
+              Sostituzione completa dei tubolari per riportare l’imbarcazione a condizioni ottimali.
+              Ideale in caso di usura avanzata o quando la riparazione non è più sufficiente.
+            </p>
+          </div>
         </div>
       </div>
 
-      <hr class="my-5">
-
-      <!-- 4) Refit -->
-      <div class="row align-items-center g-4 flex-row-reverse">
-        <div class="col-md-7" data-reveal>
-          <h2 class="fw-bold mb-3">Refit & Restauro</h2>
-          <p class="text-muted">
-            Restyling, aggiornamenti e ripristino: dal refit tecnico all’estetica, fino a progetti completi
-            per dare nuova vita alla tua imbarcazione.
-          </p>
-
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Personalizzazioni interni/esterni</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Aggiornamenti strumentazione e sistemi</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Progetti di restauro completo</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-wemarine me-2"></i>Finiture e verniciature</li>
-          </ul>
+      <!-- RETUBING -->
+      <div class="col-md-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3">Retubing</h4>
+            <p class="text-muted">
+              Rinnovo completo dei tubolari con lavorazioni su misura.
+              Permette di aggiornare l’imbarcazione sia dal punto di vista tecnico sia estetico.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-5 text-center" data-reveal>
-          <i class="fa-solid fa-hammer fa-7x text-muted opacity-25"></i>
+      <!-- REFIT -->
+      <div class="col-md-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3">Refit tubolari</h4>
+            <p class="text-muted">
+              Interventi di aggiornamento su tubolari esistenti per migliorarne l’aspetto e valorizzare l’imbarcazione.
+              Soluzioni personalizzate in base allo stile e alle esigenze del cliente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORNITURA -->
+      <div class="col-md-12">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3">Fornitura tubolari in Europa</h4>
+            <p class="text-muted">
+              Gestiamo forniture di tubolari per clienti privati e aziende anche su scala europea.
+              Supportiamo richieste più ampie e collaborazioni continuative.
+            </p>
+          </div>
         </div>
       </div>
 
     </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="py-5">
-    <div class="container" data-reveal>
-      <div class="p-4 p-md-5 rounded-4 border bg-white d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 card-hover">
-        <div>
-          <h3 class="fw-bold mb-1">Hai bisogno di assistenza?</h3>
-          <p class="text-muted mb-0">Scrivici e ti rispondiamo rapidamente con una prima valutazione.</p>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Come lavoriamo</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="p-4">
+          <h5 class="fw-bold mb-2">Analisi</h5>
+          <p class="text-muted mb-0">
+            Valutiamo lo stato dei tubolari e le esigenze del cliente.
+          </p>
         </div>
-        <a href="contatti.html#contact-form" class="btn btn-wemarine btn-lg fw-bold">Contattaci</a>
       </div>
+
+      <div class="col-md-4">
+        <div class="p-4">
+          <h5 class="fw-bold mb-2">Intervento</h5>
+          <p class="text-muted mb-0">
+            Eseguiamo lavorazioni precise con attenzione tecnica e ai dettagli.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4">
+          <h5 class="fw-bold mb-2">Risultato</h5>
+          <p class="text-muted mb-0">
+            Restituiamo un prodotto affidabile, funzionale e curato.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-white" style="background-color: #0b2a4a;">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-3">
+      Hai bisogno di un intervento?
+    </h2>
+
+    <p class="lead mb-4">
+      Contattaci per ricevere una valutazione o maggiori informazioni sui servizi.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank">
+        Scrivici su WhatsApp
+      </a>
+
+      <a href="contatti.html" class="btn btn-outline-light btn-lg fw-bold">
+        Vai ai contatti
+      </a>
+    </div>
+
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="footer-section text-white py-5">
