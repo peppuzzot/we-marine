@@ -17,36 +17,87 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html"><img class="logo" src="../assets/img/logo-web.png"></a>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
+  <div class="container navbar-custom">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- SINISTRA -->
+    <a class="navbar-brand fw-bold" href="../index.html">
+      <img class="logo" src="../assets/img/logo-web.png" alt="We Marine">
+    </a>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./service.html">Servizi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Chi siamo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Contatti</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-outline-light btn-sm fw-semibold" href="contatti.html#contact-form">Richiedi assistenza</a>
-          </li>
-        </ul>
+    <!-- MENU DESKTOP -->
+    <div class="d-none d-lg-flex align-items-center flex-grow-1">
+      <ul class="navbar-nav navbar-menu-centered">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./service.html">Servizi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./about.html">Chi siamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contatti</a>
+        </li>
+      </ul>
+
+      <!-- DESTRA DESKTOP -->
+      <div class="navbar-cta ms-auto">
+        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form">
+          Richiedi preventivo
+        </a>
       </div>
     </div>
-  </nav>
+
+    <!-- TOGGLER MOBILE -->
+    <button class="navbar-toggler d-lg-none" type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileSidebar"
+            aria-controls="mobileSidebar"
+            aria-label="Apri menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- SIDEBAR MOBILE -->
+<div class="offcanvas offcanvas-end sidebar-mobile text-bg-dark" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+  <div class="offcanvas-header">
+    <a class="offcanvas-title" id="mobileSidebarLabel" href="../index.html">
+      <img class="logo" src="../assets/img/logo-web.png" alt="We Marine">
+    </a>
+
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column">
+    <ul class="navbar-nav mobile-nav-links mb-4 text-center">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./service.html">Servizi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./about.html">Chi siamo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./contact.html">Contatti</a>
+      </li>
+    </ul>
+
+    <div class="mt-auto d-grid gap-2">
+      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form">
+        Richiedi preventivo
+      </a>
+      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank">
+        Scrivici su WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
 
   <!-- PAGE HEADER -->
 <section class="page-header-section page-hero-about">
@@ -151,7 +202,7 @@
         Scrivici su WhatsApp
       </a>
 
-      <a href="contatti.html" class="btn btn-outline-light btn-lg fw-bold">
+      <a href="./contact.html" class="btn btn-outline-light btn-lg fw-bold">
         Vai ai contatti
       </a>
     </div>
@@ -172,10 +223,10 @@
         <div class="col-md-4">
           <h5 class="fw-bold">Link rapidi</h5>
           <ul class="list-unstyled mb-0">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="servizi.html" class="footer-link">Servizi</a></li>
-            <li><a href="chi-siamo.html" class="footer-link">Chi siamo</a></li>
-            <li><a href="contatti.html" class="footer-link">Contatti</a></li>
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="./service.html" class="footer-link">Servizi</a></li>
+            <li><a href="./about.html" class="footer-link">Chi siamo</a></li>
+            <li><a href="./contact.html" class="footer-link">Contatti</a></li>
           </ul>
         </div>
 
@@ -201,6 +252,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
   <!-- Custom JS -->
-  <script src="assets/js/script.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
