@@ -9,85 +9,116 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
-<body>
+<body data-page="services">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
   <div class="container navbar-custom">
 
-    <!-- SINISTRA -->
     <a class="navbar-brand fw-bold" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
     </a>
 
-    <!-- MENU DESKTOP -->
     <div class="d-none d-lg-flex align-items-center flex-grow-1">
       <ul class="navbar-nav navbar-menu-centered">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.html" data-i18n="nav.home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./service.html">Servizi</a>
+          <a class="nav-link active" href="./service.html" data-i18n="nav.services">Servizi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./about.html">Chi siamo</a>
+          <a class="nav-link" href="./about.html" data-i18n="nav.about">Chi siamo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./contact.html">Contatti</a>
+          <a class="nav-link" href="./contact.html" data-i18n="nav.contacts">Contatti</a>
         </li>
       </ul>
 
-      <!-- DESTRA DESKTOP -->
       <div class="navbar-cta ms-auto">
-        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form">
+        <div class="dropdown language-switcher">
+          <button class="btn btn-outline-light btn-sm fw-semibold language-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-language"></i>
+            <span data-lang-current>IT</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end language-menu">
+            <li>
+              <button class="dropdown-item" type="button" data-lang-option="it">
+                <span class="language-option-code">IT</span>
+                <span data-i18n="lang.italian">Italiano</span>
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button" data-lang-option="en">
+                <span class="language-option-code">EN</span>
+                <span data-i18n="lang.english">English</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
           Richiedi preventivo
         </a>
       </div>
     </div>
 
-    <!-- TOGGLER MOBILE -->
     <button class="navbar-toggler d-lg-none" type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#mobileSidebar"
             aria-controls="mobileSidebar"
-            aria-label="Apri menu">
+            aria-label="Apri menu"
+            data-i18n-aria-label="nav.openMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
   </div>
 </nav>
 
-<!-- SIDEBAR MOBILE -->
 <div class="offcanvas offcanvas-end sidebar-mobile text-bg-dark" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
   <div class="offcanvas-header">
     <a class="offcanvas-title" id="mobileSidebarLabel" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
     </a>
 
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi" data-i18n-aria-label="nav.closeMenu"></button>
   </div>
 
   <div class="offcanvas-body d-flex flex-column">
     <ul class="navbar-nav mobile-nav-links mb-4 text-center">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        <a class="nav-link" aria-current="page" href="../index.html" data-i18n="nav.home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="./service.html">Servizi</a>
+        <a class="nav-link active" href="./service.html" data-i18n="nav.services">Servizi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./about.html">Chi siamo</a>
+        <a class="nav-link" href="./about.html" data-i18n="nav.about">Chi siamo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./contact.html">Contatti</a>
+        <a class="nav-link" href="./contact.html" data-i18n="nav.contacts">Contatti</a>
       </li>
     </ul>
 
+    <div class="language-mobile-panel">
+      <span class="language-mobile-label" data-i18n="lang.label">Lingua</span>
+      <div class="language-mobile-options">
+        <button class="language-mobile-btn" type="button" data-lang-option="it">
+          <span class="language-option-code">IT</span>
+          <span data-i18n="lang.italian">Italiano</span>
+        </button>
+        <button class="language-mobile-btn" type="button" data-lang-option="en">
+          <span class="language-option-code">EN</span>
+          <span data-i18n="lang.english">English</span>
+        </button>
+      </div>
+    </div>
+
     <div class="mt-auto d-grid gap-2">
-      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form">
+      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
         Richiedi preventivo
       </a>
-      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank">
+      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank" data-i18n="nav.whatsapp">
         Scrivici su WhatsApp
       </a>
     </div>
@@ -100,10 +131,10 @@
       <div class="page-header-grid"></div>
       <div class="container position-relative">
         <div class="page-header-content" data-reveal>
-          <span class="section-kicker text-white-50">Servizi nautici specializzati</span>
-          <h1>Servizi costruiti per valorizzare tubolari, affidabilita e percezione del mezzo.</h1>
-          <p class="lead mb-0">
-            Una pagina piu strutturata, con contenuti tecnici, blocchi dedicati e CTA distribuite meglio per accompagnare il visitatore dalla comprensione del problema alla richiesta di contatto.
+          <span class="section-kicker text-white-50" data-i18n="services.hero.kicker">Servizi nautici specializzati</span>
+          <h1 data-i18n="services.hero.title">Servizi dedicati ai tubolari per gommoni e imbarcazioni pneumatiche.</h1>
+          <p class="lead mb-0" data-i18n="services.hero.lead">
+            Riparazioni, sostituzioni, retubing, refit e lavorazioni su misura per riportare il mezzo a condizioni affidabili, ordinate e adatte al suo impiego.
           </p>
         </div>
       </div>
@@ -113,25 +144,25 @@
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-7" data-reveal>
-            <span class="section-kicker">Panoramica servizi</span>
-            <h2>Ogni intervento ha un perimetro preciso, una logica tecnica e un obiettivo chiaro.</h2>
-            <p class="section-intro">
-              La pagina servizi adesso distribuisce meglio le informazioni: il visitatore capisce subito cosa fate, come intervenite, in quali casi conviene una riparazione o una sostituzione e dove trovare prova visiva delle lavorazioni.
+            <span class="section-kicker" data-i18n="services.overview.kicker">Panoramica servizi</span>
+            <h2 data-i18n="services.overview.title">Ogni intervento ha un perimetro preciso, una logica tecnica e un obiettivo chiaro.</h2>
+            <p class="section-intro" data-i18n="services.overview.lead">
+              Analizziamo lo stato del tubolare, il contesto d'uso dell'imbarcazione e le esigenze del cliente per proporre una soluzione concreta, proporzionata e tecnicamente sensata.
             </p>
           </div>
           <div class="col-lg-5" data-reveal>
             <div class="info-panel">
               <div class="info-panel-item">
-                <strong>Interventi principali</strong>
-                <span>Riparazione, sostituzione, retubing, refit e customizzazioni</span>
+                <strong data-i18n="services.overview.info1.label">Interventi principali</strong>
+                <span data-i18n="services.overview.info1.value">Riparazione, sostituzione, retubing, refit e customizzazioni</span>
               </div>
               <div class="info-panel-item">
-                <strong>Destinazione</strong>
-                <span>Privati, aziende, dealer, flotte e operatori nautici</span>
+                <strong data-i18n="services.overview.info2.label">Destinazione</strong>
+                <span data-i18n="services.overview.info2.value">Privati, aziende, dealer, flotte e operatori nautici</span>
               </div>
               <div class="info-panel-item">
-                <strong>Obiettivo</strong>
-                <span>Migliorare sicurezza, durata, resa estetica e ordine visivo del mezzo</span>
+                <strong data-i18n="services.overview.info3.label">Obiettivo</strong>
+                <span data-i18n="services.overview.info3.value">Migliorare sicurezza, durata, funzionalita e resa complessiva del mezzo</span>
               </div>
             </div>
           </div>
@@ -141,51 +172,51 @@
           <article class="service-detail-card emphasis" data-reveal>
             <div class="service-detail-top">
               <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-              <span class="service-chip">Riparazione</span>
+              <span class="service-chip" data-i18n="services.cards.repair.tag">Riparazione</span>
             </div>
-            <h3>Riparazioni localizzate con valutazione preventiva del margine di recupero</h3>
-            <p>Interveniamo quando il danno e circoscritto e la soluzione puo riportare il tubolare a una condizione affidabile senza ricorrere a lavorazioni non necessarie.</p>
+            <h3 data-i18n="services.cards.repair.title">Riparazioni localizzate con valutazione preventiva del margine di recupero</h3>
+            <p data-i18n="services.cards.repair.desc">Interveniamo quando il danno e circoscritto e la soluzione puo riportare il tubolare a una condizione affidabile senza ricorrere a lavorazioni non necessarie.</p>
             <ul class="feature-list dark-list">
-              <li>Danni puntuali e criticita da usura</li>
-              <li>Soluzione tecnica calibrata sul singolo caso</li>
-              <li>Comunicazione chiara sulla convenienza dell'intervento</li>
+              <li data-i18n="services.cards.repair.li1">Danni puntuali e criticita da usura</li>
+              <li data-i18n="services.cards.repair.li2">Soluzione tecnica calibrata sul singolo caso</li>
+              <li data-i18n="services.cards.repair.li3">Comunicazione chiara sulla convenienza dell'intervento</li>
             </ul>
           </article>
 
           <article class="service-detail-card" data-reveal>
             <div class="service-detail-top">
               <div class="feature-icon"><i class="fa-solid fa-repeat"></i></div>
-              <span class="service-chip">Sostituzione</span>
+              <span class="service-chip" data-i18n="services.cards.replacement.tag">Sostituzione</span>
             </div>
-            <h3>Sostituzione completa per mezzi che richiedono un ripristino piu profondo</h3>
-            <p>Quando il livello di usura e avanzato o la riparazione non sarebbe piu una scelta solida, impostiamo una sostituzione completa ordinata e coerente.</p>
+            <h3 data-i18n="services.cards.replacement.title">Sostituzione completa per mezzi che richiedono un ripristino piu profondo</h3>
+            <p data-i18n="services.cards.replacement.desc">Quando il livello di usura e avanzato o la riparazione non sarebbe piu una scelta solida, impostiamo una sostituzione completa ordinata e coerente.</p>
           </article>
 
           <article class="service-detail-card" data-reveal>
             <div class="service-detail-top">
               <div class="feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-              <span class="service-chip">Retubing</span>
+              <span class="service-chip" data-i18n="services.cards.retubing.tag">Retubing</span>
             </div>
-            <h3>Retubing progettato per aggiornare il mezzo in chiave tecnica ed estetica</h3>
-            <p>Un intervento che non si limita a sostituire, ma ridefinisce il rapporto tra prestazione, immagine e identita dell'imbarcazione.</p>
+            <h3 data-i18n="services.cards.retubing.title">Retubing progettato per aggiornare il mezzo in chiave tecnica ed estetica</h3>
+            <p data-i18n="services.cards.retubing.desc">Un intervento che non si limita a sostituire, ma ridefinisce il rapporto tra prestazione, immagine e identita dell'imbarcazione.</p>
           </article>
 
           <article class="service-detail-card" data-reveal>
             <div class="service-detail-top">
               <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-              <span class="service-chip">Refit</span>
+              <span class="service-chip" data-i18n="services.cards.refit.tag">Refit</span>
             </div>
-            <h3>Refit e revisione dell'impatto visivo, con attenzione alla coerenza complessiva</h3>
-            <p>Interveniamo per aggiornare il mezzo senza renderlo artificiale: il risultato deve sembrare professionale, non costruito per impressionare in modo forzato.</p>
+            <h3 data-i18n="services.cards.refit.title">Refit e revisione dell'impatto visivo, con attenzione alla coerenza complessiva</h3>
+            <p data-i18n="services.cards.refit.desc">Interveniamo per aggiornare il mezzo senza renderlo artificiale: il risultato deve sembrare professionale, non costruito per impressionare in modo forzato.</p>
           </article>
 
           <article class="service-detail-card wide-card" data-reveal>
             <div class="service-detail-top">
               <div class="feature-icon"><i class="fa-solid fa-earth-europe"></i></div>
-              <span class="service-chip">Supporto clienti</span>
+              <span class="service-chip" data-i18n="services.cards.support.tag">Supporto clienti</span>
             </div>
-            <h3>Forniture e lavorazioni per una clientela che puo andare oltre il singolo armatore</h3>
-            <p>La struttura della pagina racconta meglio la vostra capacita di lavorare anche con richieste piu strutturate, collaborazioni continuative e contesti professionali che cercano un interlocutore affidabile.</p>
+            <h3 data-i18n="services.cards.support.title">Forniture e lavorazioni per una clientela che puo andare oltre il singolo armatore</h3>
+            <p data-i18n="services.cards.support.desc">Gestiamo anche richieste piu articolate da parte di cantieri, aziende e operatori nautici che cercano continuita, affidabilita e un riferimento specializzato, anche per forniture in Europa.</p>
           </article>
         </div>
       </div>
@@ -195,49 +226,49 @@
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-reveal>
-            <span class="section-kicker text-white-50">Come si sviluppa un intervento</span>
-            <h2 class="text-white">Una pagina servizi piu utile spiega il metodo, non solo l'elenco delle prestazioni.</h2>
-            <p class="text-white-50 section-intro">
-              Per rafforzare UX e conversione, il percorso e stato trasformato in un modulo visivo che aiuta a capire tempi decisionali, controllo del lavoro e qualita del risultato.
+            <span class="section-kicker text-white-50" data-i18n="services.process.kicker">Come si sviluppa un intervento</span>
+            <h2 class="text-white" data-i18n="services.process.title">Ogni intervento segue un metodo preciso, dalla valutazione alla consegna.</h2>
+            <p class="text-white-50 section-intro" data-i18n="services.process.lead">
+              Lavorare bene significa procedere con ordine: capire il problema, definire la soluzione piu adatta, eseguire con attenzione e verificare il risultato finale.
             </p>
             <div class="process-grid">
               <article class="process-card">
                 <span>01</span>
-                <h3>Raccolta informazioni</h3>
-                <p>Foto, condizioni del mezzo e priorita del cliente.</p>
+                <h3 data-i18n="services.process.card1.title">Raccolta informazioni</h3>
+                <p data-i18n="services.process.card1.desc">Foto, condizioni del mezzo e priorita del cliente.</p>
               </article>
               <article class="process-card">
                 <span>02</span>
-                <h3>Diagnosi e proposta</h3>
-                <p>Analisi del caso con soluzione consigliata e perimetro dell'intervento.</p>
+                <h3 data-i18n="services.process.card2.title">Diagnosi e proposta</h3>
+                <p data-i18n="services.process.card2.desc">Analisi del caso con soluzione consigliata e perimetro dell'intervento.</p>
               </article>
               <article class="process-card">
                 <span>03</span>
-                <h3>Lavorazione</h3>
-                <p>Esecuzione con attenzione a pulizia, ordine e coerenza tecnica.</p>
+                <h3 data-i18n="services.process.card3.title">Lavorazione</h3>
+                <p data-i18n="services.process.card3.desc">Esecuzione con attenzione a pulizia, ordine e coerenza tecnica.</p>
               </article>
               <article class="process-card">
                 <span>04</span>
-                <h3>Verifica finale</h3>
-                <p>Controllo conclusivo prima della consegna o del rientro in operativita.</p>
+                <h3 data-i18n="services.process.card4.title">Verifica finale</h3>
+                <p data-i18n="services.process.card4.desc">Controllo conclusivo prima della consegna o del rientro in operativita.</p>
               </article>
             </div>
           </div>
 
           <div class="col-lg-6" data-reveal>
             <div class="comparison-panel">
-              <h3>Quando la pagina convince di piu</h3>
+              <h3 data-i18n="services.values.title">Cosa caratterizza il nostro servizio</h3>
               <div class="comparison-row">
-                <strong>Problema del sito base</strong>
-                <p>Elenco servizi troppo generico, poca prova visiva e poca differenziazione.</p>
+                <strong data-i18n="services.values.row1.label">Valutazione tecnica</strong>
+                <p data-i18n="services.values.row1.desc">Ogni proposta parte dalle condizioni reali del mezzo e dall'uso che ne fa il cliente.</p>
               </div>
               <div class="comparison-row">
-                <strong>Nuova direzione</strong>
-                <p>Sezioni piu dense, card custom, immagini integrate e un tono piu specializzato.</p>
+                <strong data-i18n="services.values.row2.label">Lavorazione mirata</strong>
+                <p data-i18n="services.values.row2.desc">Riparazione, sostituzione o refit vengono consigliati in base alla convenienza e al risultato atteso.</p>
               </div>
               <div class="comparison-row">
-                <strong>Beneficio UX</strong>
-                <p>Maggiore chiarezza, piu fiducia e un percorso di contatto piu naturale.</p>
+                <strong data-i18n="services.values.row3.label">Controllo finale</strong>
+                <p data-i18n="services.values.row3.desc">La cura del dettaglio e la verifica conclusiva fanno parte del lavoro, non sono un passaggio secondario.</p>
               </div>
             </div>
           </div>
@@ -250,20 +281,20 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-reveal>
             <figure class="visual-slab">
-              <img src="../assets/img/dipendente-a-lavoro.png" alt="Tecnico al lavoro sui tubolari">
+              <img src="../assets/img/dipendente-a-lavoro.png" alt="Tecnico al lavoro sui tubolari" data-i18n-alt="services.detail.imageAlt">
             </figure>
           </div>
           <div class="col-lg-6" data-reveal>
-            <span class="section-kicker">Materiali e cura del dettaglio</span>
-            <h2>Le immagini lavorano insieme al testo per sostenere il posizionamento premium.</h2>
-            <p class="section-intro">
-              La pagina non deve sembrare un catalogo astratto. Per questo abbiamo introdotto blocchi affiancati in cui testo, immagine e punti di forza si rafforzano a vicenda.
+            <span class="section-kicker" data-i18n="services.detail.kicker">Materiali e cura del dettaglio</span>
+            <h2 data-i18n="services.detail.title">Materiali adeguati, attenzione tecnica e lavorazioni coerenti con il mezzo.</h2>
+            <p class="section-intro" data-i18n="services.detail.lead">
+              Ogni intervento viene eseguito con attenzione a tenuta, durata, finiture e coerenza con la struttura dell'imbarcazione, evitando soluzioni improvvisate o poco affidabili.
             </p>
             <div class="check-list">
-              <div><i class="fa-solid fa-check"></i><span>Scelte tecniche motivate e presentate con chiarezza</span></div>
-              <div><i class="fa-solid fa-check"></i><span>Visual piu grandi e meglio integrati nella gerarchia del layout</span></div>
-              <div><i class="fa-solid fa-check"></i><span>Micro elementi grafici sobrii, coerenti con il settore nautico</span></div>
-              <div><i class="fa-solid fa-check"></i><span>CTA presenti nei punti giusti, senza appesantire la pagina</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="services.detail.li1">Scelte tecniche motivate e presentate con chiarezza</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="services.detail.li2">Attenzione a tenuta, durata e affidabilita nel tempo</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="services.detail.li3">Lavorazioni curate anche sotto il profilo estetico</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="services.detail.li4">Confronto diretto con il cliente prima, durante e dopo l'intervento</span></div>
             </div>
           </div>
         </div>
@@ -274,57 +305,57 @@
       <div class="container">
         <div class="row g-4 align-items-center mb-5">
           <div class="col-lg-7" data-reveal>
-            <span class="section-kicker">Portfolio filtrabile</span>
-            <h2>Una gallery piu forte rende i servizi piu credibili.</h2>
-            <p class="section-intro">
-              Il filtro JavaScript resta leggero ma migliora molto la UX: aiuta a leggere il portfolio per categoria e rende piu rapido l'accesso ai contenuti rilevanti.
+            <span class="section-kicker" data-i18n="services.portfolio.kicker">Portfolio filtrabile</span>
+            <h2 data-i18n="services.portfolio.title">Alcuni esempi di lavorazioni eseguite su tubolari e gommoni.</h2>
+            <p class="section-intro" data-i18n="services.portfolio.lead">
+              Una raccolta di interventi che aiuta a capire il tipo di attivita che svolgiamo, dal recupero di danni localizzati al rinnovo completo del mezzo.
             </p>
           </div>
           <div class="col-lg-5" data-reveal>
             <div class="filter-pills" data-filter-group>
-              <button class="filter-pill is-active" type="button" data-filter="all">Tutti i lavori</button>
-              <button class="filter-pill" type="button" data-filter="repair">Riparazioni</button>
-              <button class="filter-pill" type="button" data-filter="replacement">Sostituzioni</button>
-              <button class="filter-pill" type="button" data-filter="refit">Refit</button>
-              <button class="filter-pill" type="button" data-filter="detail">Dettagli</button>
+              <button class="filter-pill is-active" type="button" data-filter="all" data-i18n="services.portfolio.filterAll">Tutti i lavori</button>
+              <button class="filter-pill" type="button" data-filter="repair" data-i18n="services.portfolio.filterRepair">Riparazioni</button>
+              <button class="filter-pill" type="button" data-filter="replacement" data-i18n="services.portfolio.filterReplacement">Sostituzioni</button>
+              <button class="filter-pill" type="button" data-filter="refit" data-i18n="services.portfolio.filterRefit">Refit</button>
+              <button class="filter-pill" type="button" data-filter="detail" data-i18n="services.portfolio.filterDetail">Dettagli</button>
             </div>
           </div>
         </div>
 
         <div class="portfolio-grid compact-grid" data-filter-target>
           <article class="portfolio-card" data-category="repair" data-reveal>
-            <img src="../assets/img/dipendente-a-lavoro.png" alt="Riparazione mirata">
+            <img src="../assets/img/dipendente-a-lavoro.png" alt="Riparazione mirata" data-i18n-alt="services.portfolio.card1.alt">
             <div class="portfolio-card-body">
-              <span class="portfolio-tag">Riparazione</span>
-              <h3>Recupero puntuale di una criticita localizzata</h3>
-              <p>Prima lettura del problema, poi intervento calibrato e finitura ordinata.</p>
+              <span class="portfolio-tag" data-i18n="services.portfolio.card1.tag">Riparazione</span>
+              <h3 data-i18n="services.portfolio.card1.title">Recupero puntuale di una criticita localizzata</h3>
+              <p data-i18n="services.portfolio.card1.desc">Prima lettura del problema, poi intervento calibrato e finitura ordinata.</p>
             </div>
           </article>
 
           <article class="portfolio-card" data-category="replacement" data-reveal>
-            <img src="../assets/img/barca-1.jpg" alt="Sostituzione completa">
+            <img src="../assets/img/barca-1.jpg" alt="Sostituzione completa" data-i18n-alt="services.portfolio.card2.alt">
             <div class="portfolio-card-body">
-              <span class="portfolio-tag">Sostituzione</span>
-              <h3>Nuova configurazione con presenza piu solida del mezzo</h3>
-              <p>Una soluzione piu profonda quando il recupero non sarebbe piu sufficiente.</p>
+              <span class="portfolio-tag" data-i18n="services.portfolio.card2.tag">Sostituzione</span>
+              <h3 data-i18n="services.portfolio.card2.title">Nuova configurazione con presenza piu solida del mezzo</h3>
+              <p data-i18n="services.portfolio.card2.desc">Una soluzione piu profonda quando il recupero non sarebbe piu sufficiente.</p>
             </div>
           </article>
 
           <article class="portfolio-card" data-category="refit" data-reveal>
-            <img src="../assets/img/dipendente.-2.png" alt="Refit tubolari">
+            <img src="../assets/img/dipendente.-2.png" alt="Refit tubolari" data-i18n-alt="services.portfolio.card3.alt">
             <div class="portfolio-card-body">
-              <span class="portfolio-tag">Refit</span>
-              <h3>Refit tecnico con maggiore ordine visivo e identita</h3>
-              <p>Il refit viene raccontato come lavorazione seria, non come semplice restyling.</p>
+              <span class="portfolio-tag" data-i18n="services.portfolio.card3.tag">Refit</span>
+              <h3 data-i18n="services.portfolio.card3.title">Refit completo per rinnovare immagine e ordine del mezzo</h3>
+              <p data-i18n="services.portfolio.card3.desc">Un intervento orientato a migliorare finiture, pulizia formale e qualita percepita del gommone.</p>
             </div>
           </article>
 
           <article class="portfolio-card" data-category="detail" data-reveal>
-            <img src="../assets/img/dipendente-a-lavoro.png" alt="Dettaglio tecnico">
+            <img src="../assets/img/dipendente-a-lavoro.png" alt="Dettaglio tecnico" data-i18n-alt="services.portfolio.card4.alt">
             <div class="portfolio-card-body">
-              <span class="portfolio-tag">Dettagli</span>
-              <h3>Precisione nei raccordi e nelle finiture</h3>
-              <p>Dettagli tecnici che aumentano la qualita percepita del risultato finale.</p>
+              <span class="portfolio-tag" data-i18n="services.portfolio.card4.tag">Dettagli</span>
+              <h3 data-i18n="services.portfolio.card4.title">Precisione nei raccordi e nelle finiture</h3>
+              <p data-i18n="services.portfolio.card4.desc">Dettagli tecnici che aumentano la qualita percepita del risultato finale.</p>
             </div>
           </article>
         </div>
@@ -335,42 +366,41 @@
       <div class="container">
         <div class="cta-banner-inner" data-reveal>
           <div>
-            <span class="section-kicker text-white-50">CTA distribuita</span>
-            <h2>Hai bisogno di un intervento o vuoi capire quale servizio e piu adatto?</h2>
-            <p>Scrivici con foto e dettagli del mezzo: riceverai una prima indicazione chiara sul percorso piu sensato.</p>
+            <span class="section-kicker text-white-50" data-i18n="services.final.kicker">CTA distribuita</span>
+            <h2 data-i18n="services.final.title">Hai bisogno di un intervento o vuoi capire quale servizio e piu adatto?</h2>
+            <p data-i18n="services.final.lead">Scrivici con foto e dettagli del mezzo: riceverai una prima indicazione chiara sul percorso piu sensato.</p>
           </div>
           <div class="cta-banner-actions">
-            <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank">Scrivici su WhatsApp</a>
-            <a href="./contact.html" class="btn btn-outline-light btn-lg fw-bold">Vai ai contatti</a>
+            <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank" data-i18n="services.final.cta1">Scrivici su WhatsApp</a>
+            <a href="./contact.html" class="btn btn-outline-light btn-lg fw-bold" data-i18n="services.final.cta2">Richiedi una valutazione</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer-section text-white py-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
           <h5 class="fw-bold">WEMARINE</h5>
-          <p class="mb-1 text-white-50">Sede: Inserisci indirizzo</p>
-          <p class="mb-1 text-white-50">Email: info@wemarine.it</p>
-          <p class="mb-0 text-white-50">Tel: +39 XXX XXX XXXX</p>
+          <p class="mb-1 text-white-50"><span data-i18n="footer.locationLabel">Sede</span>: <span data-i18n="footer.locationValue">Inserisci indirizzo</span></p>
+          <p class="mb-1 text-white-50"><span data-i18n="footer.emailLabel">Email</span>: info@wemarine.it</p>
+          <p class="mb-0 text-white-50"><span data-i18n="footer.phoneLabel">Tel</span>: +39 XXX XXX XXXX</p>
         </div>
 
         <div class="col-md-4">
-          <h5 class="fw-bold">Link rapidi</h5>
+          <h5 class="fw-bold" data-i18n="footer.quickLinks">Link rapidi</h5>
           <ul class="list-unstyled mb-0">
-            <li><a href="../index.html" class="footer-link">Home</a></li>
-            <li><a href="./service.html" class="footer-link">Servizi</a></li>
-            <li><a href="./about.html" class="footer-link">Chi siamo</a></li>
-            <li><a href="./contact.html" class="footer-link">Contatti</a></li>
+            <li><a href="../index.html" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="./service.html" class="footer-link" data-i18n="nav.services">Servizi</a></li>
+            <li><a href="./about.html" class="footer-link" data-i18n="nav.about">Chi siamo</a></li>
+            <li><a href="./contact.html" class="footer-link" data-i18n="nav.contacts">Contatti</a></li>
           </ul>
         </div>
 
         <div class="col-md-4">
-          <h5 class="fw-bold">Seguici</h5>
+          <h5 class="fw-bold" data-i18n="footer.follow">Seguici</h5>
           <div class="d-flex gap-3">
             <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -382,12 +412,13 @@
       <hr class="border-secondary my-4">
 
       <div class="text-center text-white-50">
-        <small>&copy; <span id="year"></span> WEMARINE. Tutti i diritti riservati.</small>
+        <small>&copy; <span id="year"></span> <span data-i18n="footer.rights">WEMARINE. Tutti i diritti riservati.</span></small>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

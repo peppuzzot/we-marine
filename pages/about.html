@@ -9,85 +9,115 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
-<body>
+<body data-page="about">
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
   <div class="container navbar-custom">
 
-    <!-- SINISTRA -->
     <a class="navbar-brand fw-bold" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
     </a>
 
-    <!-- MENU DESKTOP -->
     <div class="d-none d-lg-flex align-items-center flex-grow-1">
       <ul class="navbar-nav navbar-menu-centered">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.html" data-i18n="nav.home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./service.html">Servizi</a>
+          <a class="nav-link" href="./service.html" data-i18n="nav.services">Servizi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./about.html">Chi siamo</a>
+          <a class="nav-link active" href="./about.html" data-i18n="nav.about">Chi siamo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./contact.html">Contatti</a>
+          <a class="nav-link" href="./contact.html" data-i18n="nav.contacts">Contatti</a>
         </li>
       </ul>
 
-      <!-- DESTRA DESKTOP -->
       <div class="navbar-cta ms-auto">
-        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form">
+        <div class="dropdown language-switcher">
+          <button class="btn btn-outline-light btn-sm fw-semibold language-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-language"></i>
+            <span data-lang-current>IT</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end language-menu">
+            <li>
+              <button class="dropdown-item" type="button" data-lang-option="it">
+                <span class="language-option-code">IT</span>
+                <span data-i18n="lang.italian">Italiano</span>
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button" data-lang-option="en">
+                <span class="language-option-code">EN</span>
+                <span data-i18n="lang.english">English</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
           Richiedi preventivo
         </a>
       </div>
     </div>
 
-    <!-- TOGGLER MOBILE -->
     <button class="navbar-toggler d-lg-none" type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#mobileSidebar"
             aria-controls="mobileSidebar"
-            aria-label="Apri menu">
+            aria-label="Apri menu"
+            data-i18n-aria-label="nav.openMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
   </div>
 </nav>
 
-<!-- SIDEBAR MOBILE -->
 <div class="offcanvas offcanvas-end sidebar-mobile text-bg-dark" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
   <div class="offcanvas-header">
     <a class="offcanvas-title" id="mobileSidebarLabel" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
     </a>
 
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi" data-i18n-aria-label="nav.closeMenu"></button>
   </div>
 
   <div class="offcanvas-body d-flex flex-column">
     <ul class="navbar-nav mobile-nav-links mb-4 text-center">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        <a class="nav-link" aria-current="page" href="../index.html" data-i18n="nav.home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./service.html">Servizi</a>
+        <a class="nav-link" href="./service.html" data-i18n="nav.services">Servizi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="./about.html">Chi siamo</a>
+        <a class="nav-link active" href="./about.html" data-i18n="nav.about">Chi siamo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./contact.html">Contatti</a>
+        <a class="nav-link" href="./contact.html" data-i18n="nav.contacts">Contatti</a>
       </li>
     </ul>
 
+    <div class="language-mobile-panel">
+      <span class="language-mobile-label" data-i18n="lang.label">Lingua</span>
+      <div class="language-mobile-options">
+        <button class="language-mobile-btn" type="button" data-lang-option="it">
+          <span class="language-option-code">IT</span>
+          <span data-i18n="lang.italian">Italiano</span>
+        </button>
+        <button class="language-mobile-btn" type="button" data-lang-option="en">
+          <span class="language-option-code">EN</span>
+          <span data-i18n="lang.english">English</span>
+        </button>
+      </div>
+    </div>
+
     <div class="mt-auto d-grid gap-2">
-      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form">
+      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
         Richiedi preventivo
       </a>
-      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank">
+      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank" data-i18n="nav.whatsapp">
         Scrivici su WhatsApp
       </a>
     </div>
@@ -100,10 +130,10 @@
       <div class="page-header-grid"></div>
       <div class="container position-relative">
         <div class="page-header-content" data-reveal>
-          <span class="section-kicker text-white-50">Identita e credibilita</span>
-          <h1>Chi siamo: una pagina piu editoriale, concreta e autorevole.</h1>
-          <p class="lead mb-0">
-            L'obiettivo qui non e solo raccontare l'azienda, ma far percepire competenza, metodo e specializzazione con una costruzione visiva piu solida e piu credibile.
+          <span class="section-kicker text-white-50" data-i18n="about.hero.kicker">Identita e credibilita</span>
+          <h1 data-i18n="about.hero.title">We Marine: competenza specifica negli interventi su tubolari e imbarcazioni pneumatiche.</h1>
+          <p class="lead mb-0" data-i18n="about.hero.lead">
+            Lavoriamo con un approccio tecnico e diretto, offrendo soluzioni su misura per privati, aziende e operatori del settore nautico.
           </p>
         </div>
       </div>
@@ -113,26 +143,26 @@
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-reveal>
-            <span class="section-kicker">Identita</span>
-            <h2>We Marine nasce da un focus preciso: lavorare bene su tubolari, senza disperdersi nel generico.</h2>
-            <p class="section-intro">
-              La nuova pagina Chi siamo mette insieme storytelling leggero, punti di forza concreti e una struttura piu visiva. Il risultato comunica piu affidabilita e rende il brand meno anonimo.
+            <span class="section-kicker" data-i18n="about.identity.kicker">Identita</span>
+            <h2 data-i18n="about.identity.title">We Marine nasce da un focus preciso: lavorare bene su tubolari, senza disperdersi nel generico.</h2>
+            <p class="section-intro" data-i18n="about.identity.lead">
+              Ci occupiamo di riparazione, sostituzione, retubing e refit dei tubolari con attenzione a funzionalita, durata e cura del dettaglio. Ogni intervento viene impostato per rispondere a esigenze reali, non a soluzioni standard.
             </p>
             <div class="story-grid">
               <article class="story-card">
-                <h3>Specializzazione</h3>
-                <p>Concentrare il lavoro sui tubolari significa costruire un linguaggio tecnico piu credibile e un servizio piu riconoscibile.</p>
+                <h3 data-i18n="about.identity.card1.title">Specializzazione</h3>
+                <p data-i18n="about.identity.card1.desc">Concentrare il lavoro sui tubolari significa costruire un linguaggio tecnico piu credibile e un servizio piu riconoscibile.</p>
               </article>
               <article class="story-card">
-                <h3>Approccio diretto</h3>
-                <p>Ogni intervento viene letto per quello che e, evitando promesse vaghe o lavorazioni inutili.</p>
+                <h3 data-i18n="about.identity.card2.title">Approccio diretto</h3>
+                <p data-i18n="about.identity.card2.desc">Ogni intervento viene letto per quello che e, evitando promesse vaghe o lavorazioni inutili.</p>
               </article>
             </div>
           </div>
 
           <div class="col-lg-6" data-reveal>
             <figure class="visual-slab tall-slab">
-              <img src="../assets/img/dipendente-a-lavoro.png" alt="Lavorazione professionale We Marine">
+              <img src="../assets/img/dipendente-a-lavoro.png" alt="Lavorazione professionale We Marine" data-i18n-alt="about.identity.imageAlt">
             </figure>
           </div>
         </div>
@@ -142,10 +172,10 @@
     <section class="section-light-accent py-6">
       <div class="container">
         <div class="section-heading text-center" data-reveal>
-          <span class="section-kicker">Punti di forza</span>
-          <h2>Una pagina Chi siamo piu forte mette in evidenza il modo di lavorare, non solo la descrizione aziendale.</h2>
-          <p>
-            Qui entrano in gioco i contenuti che aumentano fiducia: metodo, ordine, qualita del confronto con il cliente, attenzione tecnica e capacita di costruire soluzioni su misura.
+          <span class="section-kicker" data-i18n="about.values.kicker">Punti di forza</span>
+          <h2 data-i18n="about.values.title">I valori che guidano il nostro modo di lavorare ogni giorno.</h2>
+          <p data-i18n="about.values.lead">
+            Metodo, attenzione tecnica, ascolto del cliente e cura dell'esecuzione sono alla base di ogni lavorazione, dal piccolo intervento al rinnovo piu completo.
           </p>
         </div>
 
@@ -153,29 +183,29 @@
           <div class="col-md-6 col-xl-3" data-reveal>
             <article class="identity-card">
               <i class="fa-solid fa-binoculars"></i>
-              <h3>Lettura tecnica</h3>
-              <p>Ogni caso viene valutato partendo dalle condizioni reali del mezzo.</p>
+              <h3 data-i18n="about.values.card1.title">Lettura tecnica</h3>
+              <p data-i18n="about.values.card1.desc">Ogni caso viene valutato partendo dalle condizioni reali del mezzo.</p>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-reveal>
             <article class="identity-card">
               <i class="fa-solid fa-pen-ruler"></i>
-              <h3>Proposte su misura</h3>
-              <p>Il servizio non viene applicato in modo standard, ma calibrato sull'obiettivo.</p>
+              <h3 data-i18n="about.values.card2.title">Proposte su misura</h3>
+              <p data-i18n="about.values.card2.desc">Il servizio non viene applicato in modo standard, ma calibrato sull'obiettivo.</p>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-reveal>
             <article class="identity-card">
               <i class="fa-solid fa-handshake-angle"></i>
-              <h3>Relazione chiara</h3>
-              <p>Parliamo in modo diretto, con passaggi leggibili e aspettative realistiche.</p>
+              <h3 data-i18n="about.values.card3.title">Relazione chiara</h3>
+              <p data-i18n="about.values.card3.desc">Parliamo in modo diretto, con passaggi leggibili e aspettative realistiche.</p>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-reveal>
             <article class="identity-card">
               <i class="fa-solid fa-gem"></i>
-              <h3>Risultato curato</h3>
-              <p>Il lavoro deve apparire solido, ordinato e coerente con un contesto professionale.</p>
+              <h3 data-i18n="about.values.card4.title">Risultato curato</h3>
+              <p data-i18n="about.values.card4.desc">Il lavoro deve apparire solido, ordinato e coerente con un contesto professionale.</p>
             </article>
           </div>
         </div>
@@ -186,10 +216,10 @@
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col-lg-5" data-reveal>
-            <span class="section-kicker text-white-50">Approccio al lavoro</span>
-            <h2 class="text-white">Raccontare il processo rafforza la credibilita piu di una semplice pagina testo.</h2>
-            <p class="text-white-50 section-intro">
-              La pagina ora costruisce una mini narrazione professionale: osservazione, scelta, lavorazione, controllo. Piu contenuto, piu ordine, piu identita.
+            <span class="section-kicker text-white-50" data-i18n="about.process.kicker">Approccio al lavoro</span>
+            <h2 class="text-white" data-i18n="about.process.title">Il nostro approccio parte dall'analisi del mezzo e arriva a una soluzione concreta.</h2>
+            <p class="text-white-50 section-intro" data-i18n="about.process.lead">
+              Ogni lavorazione segue un percorso chiaro: valutiamo il caso, definiamo l'intervento piu corretto e lavoriamo con precisione fino al controllo finale.
             </p>
           </div>
 
@@ -198,22 +228,22 @@
               <article class="timeline-item">
                 <span class="timeline-step">01</span>
                 <div>
-                  <h3>Osserviamo il mezzo e ascoltiamo il contesto</h3>
-                  <p>Ogni intervento nasce dall'incontro tra condizioni tecniche e uso reale dell'imbarcazione.</p>
+                  <h3 data-i18n="about.process.step1.title">Osserviamo il mezzo e ascoltiamo il contesto</h3>
+                  <p data-i18n="about.process.step1.desc">Ogni intervento nasce dall'incontro tra condizioni tecniche e uso reale dell'imbarcazione.</p>
                 </div>
               </article>
               <article class="timeline-item">
                 <span class="timeline-step">02</span>
                 <div>
-                  <h3>Definiamo la scelta piu sensata</h3>
-                  <p>Riparazione, sostituzione o refit devono essere soluzioni motivate, non automatismi.</p>
+                  <h3 data-i18n="about.process.step2.title">Definiamo la scelta piu sensata</h3>
+                  <p data-i18n="about.process.step2.desc">Riparazione, sostituzione o refit devono essere soluzioni motivate, non automatismi.</p>
                 </div>
               </article>
               <article class="timeline-item">
                 <span class="timeline-step">03</span>
                 <div>
-                  <h3>Realizziamo con ordine e attenzione al dettaglio</h3>
-                  <p>Il risultato deve essere credibile sia dal punto di vista tecnico sia dalla percezione visiva complessiva.</p>
+                  <h3 data-i18n="about.process.step3.title">Realizziamo con ordine e attenzione al dettaglio</h3>
+                  <p data-i18n="about.process.step3.desc">Ogni lavorazione deve garantire affidabilita, pulizia esecutiva e una resa coerente con il livello del mezzo.</p>
                 </div>
               </article>
             </div>
@@ -227,27 +257,27 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-reveal>
             <figure class="visual-slab">
-              <img src="../assets/img/barca-1.jpg" alt="Imbarcazione valorizzata">
+              <img src="../assets/img/barca-1.jpg" alt="Imbarcazione valorizzata" data-i18n-alt="about.focus.imageAlt">
             </figure>
           </div>
           <div class="col-lg-6" data-reveal>
-            <span class="section-kicker">Valore percepito</span>
-            <h2>Il brand diventa piu credibile quando immagini, testo e struttura parlano la stessa lingua.</h2>
-            <p class="section-intro">
-              La vecchia pagina risultava troppo piatta. Ora la composizione e piu editoriale, con un'alternanza tra contenuti visivi, blocchi testuali e segnali di affidabilita.
+            <span class="section-kicker" data-i18n="about.focus.kicker">Valore percepito</span>
+            <h2 data-i18n="about.focus.title">Affidabilita, specializzazione e attenzione al cliente sono il centro del nostro lavoro.</h2>
+            <p class="section-intro" data-i18n="about.focus.lead">
+              Lavoriamo per offrire un servizio serio, leggibile e concreto, in cui il cliente trova competenza tecnica, confronto chiaro e soluzioni costruite sul proprio mezzo.
             </p>
             <div class="metric-strip">
               <div class="metric-strip-item">
-                <strong>Focus</strong>
-                <span>Tubolari, refit, lavorazioni su misura</span>
+                <strong data-i18n="about.focus.item1.label">Focus</strong>
+                <span data-i18n="about.focus.item1.value">Tubolari, refit, lavorazioni su misura</span>
               </div>
               <div class="metric-strip-item">
-                <strong>Tono</strong>
-                <span>Tecnico, ordinato, professionale</span>
+                <strong data-i18n="about.focus.item2.label">Tono</strong>
+                <span data-i18n="about.focus.item2.value">Tecnico, ordinato, professionale</span>
               </div>
               <div class="metric-strip-item">
-                <strong>Obiettivo</strong>
-                <span>Trasmettere affidabilita e invito al contatto</span>
+                <strong data-i18n="about.focus.item3.label">Obiettivo</strong>
+                <span data-i18n="about.focus.item3.value">Trasmettere affidabilita e invito al contatto</span>
               </div>
             </div>
           </div>
@@ -259,42 +289,41 @@
       <div class="container">
         <div class="cta-banner-inner" data-reveal>
           <div>
-            <span class="section-kicker text-white-50">Contatto diretto</span>
-            <h2>Se vuoi parlare di un intervento, partiamo da immagini chiare e obiettivi concreti.</h2>
-            <p>Possiamo valutare insieme il caso e capire se serve una riparazione, un refit o una sostituzione piu profonda.</p>
+            <span class="section-kicker text-white-50" data-i18n="about.final.kicker">Contatto diretto</span>
+            <h2 data-i18n="about.final.title">Se vuoi parlare di un intervento, partiamo da immagini chiare e obiettivi concreti.</h2>
+            <p data-i18n="about.final.lead">Possiamo valutare insieme il caso e capire se serve una riparazione, un refit o una sostituzione piu profonda.</p>
           </div>
           <div class="cta-banner-actions">
-            <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank">Scrivici su WhatsApp</a>
-            <a href="./contact.html" class="btn btn-outline-light btn-lg fw-bold">Vai ai contatti</a>
+            <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank" data-i18n="about.final.cta1">Scrivici su WhatsApp</a>
+            <a href="./contact.html" class="btn btn-outline-light btn-lg fw-bold" data-i18n="about.final.cta2">Vai ai contatti</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer-section text-white py-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
           <h5 class="fw-bold">WEMARINE</h5>
-          <p class="mb-1 text-white-50">Sede: Inserisci indirizzo</p>
-          <p class="mb-1 text-white-50">Email: info@wemarine.it</p>
-          <p class="mb-0 text-white-50">Tel: +39 XXX XXX XXXX</p>
+          <p class="mb-1 text-white-50"><span data-i18n="footer.locationLabel">Sede</span>: <span data-i18n="footer.locationValue">Inserisci indirizzo</span></p>
+          <p class="mb-1 text-white-50"><span data-i18n="footer.emailLabel">Email</span>: info@wemarine.it</p>
+          <p class="mb-0 text-white-50"><span data-i18n="footer.phoneLabel">Tel</span>: +39 XXX XXX XXXX</p>
         </div>
 
         <div class="col-md-4">
-          <h5 class="fw-bold">Link rapidi</h5>
+          <h5 class="fw-bold" data-i18n="footer.quickLinks">Link rapidi</h5>
           <ul class="list-unstyled mb-0">
-            <li><a href="../index.html" class="footer-link">Home</a></li>
-            <li><a href="./service.html" class="footer-link">Servizi</a></li>
-            <li><a href="./about.html" class="footer-link">Chi siamo</a></li>
-            <li><a href="./contact.html" class="footer-link">Contatti</a></li>
+            <li><a href="../index.html" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="./service.html" class="footer-link" data-i18n="nav.services">Servizi</a></li>
+            <li><a href="./about.html" class="footer-link" data-i18n="nav.about">Chi siamo</a></li>
+            <li><a href="./contact.html" class="footer-link" data-i18n="nav.contacts">Contatti</a></li>
           </ul>
         </div>
 
         <div class="col-md-4">
-          <h5 class="fw-bold">Seguici</h5>
+          <h5 class="fw-bold" data-i18n="footer.follow">Seguici</h5>
           <div class="d-flex gap-3">
             <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -306,12 +335,13 @@
       <hr class="border-secondary my-4">
 
       <div class="text-center text-white-50">
-        <small>&copy; <span id="year"></span> WEMARINE. Tutti i diritti riservati.</small>
+        <small>&copy; <span id="year"></span> <span data-i18n="footer.rights">WEMARINE. Tutti i diritti riservati.</span></small>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

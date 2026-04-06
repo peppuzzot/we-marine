@@ -3,229 +3,393 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WEMARINE - Servizi</title>
+  <title>WEMARINE - Contatti</title>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
-<body>
+<body data-page="contact">
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
   <div class="container navbar-custom">
 
-    <!-- SINISTRA -->
     <a class="navbar-brand fw-bold" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
     </a>
 
-    <!-- MENU DESKTOP -->
     <div class="d-none d-lg-flex align-items-center flex-grow-1">
       <ul class="navbar-nav navbar-menu-centered">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.html" data-i18n="nav.home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./service.html">Servizi</a>
+          <a class="nav-link" href="./service.html" data-i18n="nav.services">Servizi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./about.html">Chi siamo</a>
+          <a class="nav-link" href="./about.html" data-i18n="nav.about">Chi siamo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./contact.html">Contatti</a>
+          <a class="nav-link active" href="./contact.html" data-i18n="nav.contacts">Contatti</a>
         </li>
       </ul>
 
-      <!-- DESTRA DESKTOP -->
       <div class="navbar-cta ms-auto">
-        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form">
+        <div class="dropdown language-switcher">
+          <button class="btn btn-outline-light btn-sm fw-semibold language-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-language"></i>
+            <span data-lang-current>IT</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end language-menu">
+            <li>
+              <button class="dropdown-item" type="button" data-lang-option="it">
+                <span class="language-option-code">IT</span>
+                <span data-i18n="lang.italian">Italiano</span>
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button" data-lang-option="en">
+                <span class="language-option-code">EN</span>
+                <span data-i18n="lang.english">English</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <a class="btn btn-outline-light btn-sm fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
           Richiedi preventivo
         </a>
       </div>
     </div>
 
-    <!-- TOGGLER MOBILE -->
     <button class="navbar-toggler d-lg-none" type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#mobileSidebar"
             aria-controls="mobileSidebar"
-            aria-label="Apri menu">
+            aria-label="Apri menu"
+            data-i18n-aria-label="nav.openMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
   </div>
 </nav>
 
-<!-- SIDEBAR MOBILE -->
 <div class="offcanvas offcanvas-end sidebar-mobile text-bg-dark" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
   <div class="offcanvas-header">
     <a class="offcanvas-title" id="mobileSidebarLabel" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
     </a>
 
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Chiudi" data-i18n-aria-label="nav.closeMenu"></button>
   </div>
 
   <div class="offcanvas-body d-flex flex-column">
     <ul class="navbar-nav mobile-nav-links mb-4 text-center">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        <a class="nav-link" aria-current="page" href="../index.html" data-i18n="nav.home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./service.html">Servizi</a>
+        <a class="nav-link" href="./service.html" data-i18n="nav.services">Servizi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./about.html">Chi siamo</a>
+        <a class="nav-link" href="./about.html" data-i18n="nav.about">Chi siamo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="./contact.html">Contatti</a>
+        <a class="nav-link active" href="./contact.html" data-i18n="nav.contacts">Contatti</a>
       </li>
     </ul>
 
+    <div class="language-mobile-panel">
+      <span class="language-mobile-label" data-i18n="lang.label">Lingua</span>
+      <div class="language-mobile-options">
+        <button class="language-mobile-btn" type="button" data-lang-option="it">
+          <span class="language-option-code">IT</span>
+          <span data-i18n="lang.italian">Italiano</span>
+        </button>
+        <button class="language-mobile-btn" type="button" data-lang-option="en">
+          <span class="language-option-code">EN</span>
+          <span data-i18n="lang.english">English</span>
+        </button>
+      </div>
+    </div>
+
     <div class="mt-auto d-grid gap-2">
-      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form">
+      <a class="btn btn-light fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
         Richiedi preventivo
       </a>
-      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank">
+      <a class="btn btn-outline-light fw-semibold" href="https://wa.me/39XXXXXXXXXX" target="_blank" data-i18n="nav.whatsapp">
         Scrivici su WhatsApp
       </a>
     </div>
   </div>
 </div>
 
-  <!-- PAGE HEADER -->
-<section class="page-header-section">
-  <div class="page-header-overlay"></div>
-  <div class="container position-relative text-center text-white">
-    <h1 class="fw-bold">Contatti</h1>
-    <p class="lead mb-0">
-      Richiedi informazioni o una valutazione per il tuo intervento.
-    </p>
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section class="py-5 bg-white">
-  <div class="container">
-    <div class="row g-5">
-
-      <!-- INFO + WHATSAPP -->
-      <div class="col-lg-5">
-        <h2 class="fw-bold mb-3">Contattaci</h2>
-        <p class="text-muted mb-4">
-          Per richieste rapide ti consigliamo di contattarci direttamente su WhatsApp.
-          In alternativa puoi compilare il modulo e ti risponderemo il prima possibile.
-        </p>
-
-        <!-- WHATSAPP CTA -->
-        <a href="https://wa.me/39XXXXXXXXXX" target="_blank" class="btn btn-wemarine btn-lg w-100 mb-4">
-          Scrivici su WhatsApp
-        </a>
-
-        <!-- INFO -->
-        <div class="mb-3">
-          <strong>Email</strong>
-          <p class="mb-1 text-muted">info@wemarine.it</p>
-        </div>
-
-        <div class="mb-3">
-          <strong>Telefono</strong>
-          <p class="mb-1 text-muted">+39 XXX XXX XXXX</p>
-        </div>
-
-        <div>
-          <strong>Sede</strong>
-          <p class="mb-0 text-muted">Inserisci indirizzo</p>
+  <main>
+    <section class="page-header-section page-hero-contact">
+      <div class="page-header-overlay"></div>
+      <div class="page-header-grid"></div>
+      <div class="container position-relative">
+        <div class="page-header-content" data-reveal>
+          <span class="section-kicker text-white-50" data-i18n="contact.hero.kicker">Contatto diretto</span>
+          <h1 data-i18n="contact.hero.title">Parliamo del tuo intervento su tubolari, refit o lavorazioni su misura.</h1>
+          <p class="lead mb-0" data-i18n="contact.hero.lead">
+            Se hai bisogno di una riparazione, di una sostituzione completa o di una valutazione tecnica, puoi contattarci per ricevere un confronto chiaro e una prima indicazione operativa.
+          </p>
         </div>
       </div>
+    </section>
 
-      <!-- FORM -->
-      <div class="col-lg-7">
-        <div class="card p-4 p-md-5 shadow-sm border-0">
+    <section class="trust-band">
+      <div class="container">
+        <div class="trust-band-inner" data-reveal>
+          <div class="trust-item">
+            <i class="fa-solid fa-comments"></i>
+            <span data-i18n="contact.trust.one">Risposte dirette per richieste, preventivi e informazioni tecniche</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-file-circle-check"></i>
+            <span data-i18n="contact.trust.two">Valutazioni iniziali basate su foto, dettagli del mezzo e obiettivo dell'intervento</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-sailboat"></i>
+            <span data-i18n="contact.trust.three">Supporto per privati, cantieri, aziende e operatori del settore nautico</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-earth-europe"></i>
+            <span data-i18n="contact.trust.four">Disponibilita per lavorazioni e forniture anche in contesti extra-locali</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h4 class="fw-bold mb-4">Richiedi informazioni</h4>
+    <section class="section-surface py-6">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5" data-reveal>
+            <span class="section-kicker" data-i18n="contact.direct.kicker">Come contattarci</span>
+            <h2 data-i18n="contact.direct.title">Un canale diretto per richieste rapide e una sezione contatti piu completa.</h2>
+            <p class="section-intro" data-i18n="contact.direct.lead">
+              Possiamo aiutarti a capire se conviene intervenire con una riparazione, con una sostituzione o con un refit. Per una prima valutazione sono utili foto chiare, modello del mezzo e una breve descrizione del problema o del risultato desiderato.
+            </p>
 
-          <form id="contact-form">
+            <div class="contact-direct-stack">
+              <article class="contact-direct-card whatsapp-card">
+                <div class="contact-direct-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <h3 data-i18n="contact.direct.whatsapp.title">WhatsApp</h3>
+                  <p data-i18n="contact.direct.whatsapp.desc">Il canale piu rapido per inviare immagini, descrivere il problema e ricevere una prima indicazione.</p>
+                </div>
+                <a href="https://wa.me/39XXXXXXXXXX" target="_blank" class="btn btn-light contact-inline-btn" data-i18n="contact.direct.whatsapp.cta">Apri WhatsApp</a>
+              </article>
 
-            <div class="row g-3">
+              <article class="contact-direct-card">
+                <div class="contact-direct-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h3 data-i18n="contact.direct.email.title">Email</h3>
+                  <p data-i18n="contact.direct.email.desc">Per richieste piu articolate, documentazione o contatti professionali.</p>
+                  <strong>info@wemarine.it</strong>
+                </div>
+              </article>
 
-              <div class="col-md-6">
-                <label class="form-label">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome" required>
-              </div>
+              <article class="contact-direct-card">
+                <div class="contact-direct-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <div>
+                  <h3 data-i18n="contact.direct.phone.title">Telefono</h3>
+                  <p data-i18n="contact.direct.phone.desc">Per confronti diretti e chiarimenti sul tipo di intervento.</p>
+                  <strong>+39 XXX XXX XXXX</strong>
+                </div>
+              </article>
 
-              <div class="col-md-6">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Email" required>
-              </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Telefono</label>
-                <input type="text" class="form-control" placeholder="Telefono">
-              </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Servizio richiesto</label>
-                <select class="form-control">
-                  <option>Riparazione tubolari</option>
-                  <option>Sostituzione tubolari</option>
-                  <option>Retubing</option>
-                  <option>Refit tubolari</option>
-                  <option>Fornitura</option>
-                </select>
-              </div>
-
-              <div class="col-12">
-                <label class="form-label">Messaggio</label>
-                <textarea class="form-control" rows="5" placeholder="Descrivi la tua richiesta"></textarea>
-              </div>
-
-              <div class="col-12">
-                <button type="submit" class="btn btn-wemarine btn-lg w-100">
-                  Invia richiesta
-                </button>
-              </div>
-
+              <article class="contact-direct-card">
+                <div class="contact-direct-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h3 data-i18n="contact.direct.location.title">Operativita</h3>
+                  <p data-i18n="contact.direct.location.desc">Supporto per clienti privati e aziende, con possibilita di gestire lavorazioni e forniture anche in Europa.</p>
+                  <strong data-i18n="contact.direct.location.value">Base operativa da definire</strong>
+                </div>
+              </article>
             </div>
+          </div>
 
-          </form>
+          <div class="col-lg-7" data-reveal>
+            <div class="contact-form-shell" id="contact-form">
+              <div class="contact-form-header">
+                <span class="section-kicker" data-i18n="contact.form.kicker">Richiesta informazioni</span>
+                <h2 data-i18n="contact.form.title">Invia la tua richiesta e raccontaci di cosa hai bisogno.</h2>
+                <p data-i18n="contact.form.lead">
+                  Compila il modulo con i dati principali. Se hai gia foto o dettagli tecnici del mezzo, descrivili nel messaggio: ci aiuteranno a darti una risposta piu utile e veloce.
+                </p>
+              </div>
 
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-name" data-i18n="contact.form.nameLabel">Nome e cognome</label>
+                    <input id="contact-name" type="text" class="form-control" placeholder="Inserisci il tuo nome" data-i18n-placeholder="contact.form.namePlaceholder" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-email" data-i18n="contact.form.emailLabel">Email</label>
+                    <input id="contact-email" type="email" class="form-control" placeholder="Inserisci la tua email" data-i18n-placeholder="contact.form.emailPlaceholder" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-phone" data-i18n="contact.form.phoneLabel">Telefono</label>
+                    <input id="contact-phone" type="text" class="form-control" placeholder="Numero di telefono" data-i18n-placeholder="contact.form.phonePlaceholder">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-service" data-i18n="contact.form.serviceLabel">Servizio di interesse</label>
+                    <select id="contact-service" class="form-control">
+                      <option data-i18n="contact.form.option1">Riparazione tubolari</option>
+                      <option data-i18n="contact.form.option2">Sostituzione tubolari</option>
+                      <option data-i18n="contact.form.option3">Retubing</option>
+                      <option data-i18n="contact.form.option4">Refit estetico</option>
+                      <option data-i18n="contact.form.option5">Lavorazione su misura</option>
+                      <option data-i18n="contact.form.option6">Fornitura / richiesta professionale</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-boat" data-i18n="contact.form.boatLabel">Modello o tipo di mezzo</label>
+                    <input id="contact-boat" type="text" class="form-control" placeholder="Gommone, tender, modello, cantiere" data-i18n-placeholder="contact.form.boatPlaceholder">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-area" data-i18n="contact.form.areaLabel">Area o provenienza</label>
+                    <input id="contact-area" type="text" class="form-control" placeholder="Citta, zona o paese" data-i18n-placeholder="contact.form.areaPlaceholder">
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="contact-message" data-i18n="contact.form.messageLabel">Messaggio</label>
+                    <textarea id="contact-message" class="form-control" rows="6" placeholder="Descrivi il problema, l'intervento richiesto o il risultato che vuoi ottenere" data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="contact-form-note" data-i18n="contact.form.note">
+                      Per una valutazione piu precisa, indica se si tratta di riparazione, sostituzione, refit o richiesta professionale e aggiungi piu dettagli possibile.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-wemarine btn-lg w-100" data-i18n="contact.form.submit">
+                      Invia la richiesta
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <section class="section-light-accent py-6">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-reveal>
+            <figure class="visual-slab">
+              <img src="../assets/img/dipendente-a-lavoro.png" alt="Tecnico We Marine al lavoro" data-i18n-alt="contact.support.imageAlt">
+            </figure>
+          </div>
 
-<!-- Footer -->
+          <div class="col-lg-6" data-reveal>
+            <span class="section-kicker" data-i18n="contact.support.kicker">Quando contattarci</span>
+            <h2 data-i18n="contact.support.title">Possiamo supportarti sia per un problema specifico sia per un progetto piu ampio.</h2>
+            <p class="section-intro" data-i18n="contact.support.lead">
+              Possiamo intervenire in situazioni diverse: dalla perdita localizzata al rinnovo completo del tubolare, fino a richieste dedicate per aziende, cantieri e professionisti del settore.
+            </p>
+
+            <div class="check-list">
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li1">Riparazione di danni, usura o criticita localizzate</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li2">Sostituzione completa dei tubolari o retubing</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li3">Refit estetico e lavorazioni su misura</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li4">Richieste da cantieri, aziende, flotte o operatori del settore</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark py-6">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5" data-reveal>
+            <span class="section-kicker text-white-50" data-i18n="contact.response.kicker">Per una risposta piu utile</span>
+            <h2 class="text-white" data-i18n="contact.response.title">Alcune informazioni fanno la differenza gia dal primo contatto.</h2>
+            <p class="text-white-50 section-intro" data-i18n="contact.response.lead">
+              Un messaggio chiaro ci permette di capire meglio il tipo di intervento e di indirizzarti subito verso la soluzione piu adatta.
+            </p>
+          </div>
+
+          <div class="col-lg-7" data-reveal>
+            <div class="timeline-stack">
+              <article class="timeline-item">
+                <span class="timeline-step">01</span>
+                <div>
+                  <h3 data-i18n="contact.response.step1.title">Invia foto e dettagli del problema</h3>
+                  <p data-i18n="contact.response.step1.desc">Immagini nitide e una breve descrizione aiutano a leggere correttamente lo stato del tubolare o del mezzo.</p>
+                </div>
+              </article>
+              <article class="timeline-item">
+                <span class="timeline-step">02</span>
+                <div>
+                  <h3 data-i18n="contact.response.step2.title">Indica modello, utilizzo e obiettivo</h3>
+                  <p data-i18n="contact.response.step2.desc">Capire come viene usata l'imbarcazione aiuta a proporre una soluzione davvero coerente.</p>
+                </div>
+              </article>
+              <article class="timeline-item">
+                <span class="timeline-step">03</span>
+                <div>
+                  <h3 data-i18n="contact.response.step3.title">Ricevi una prima indicazione</h3>
+                  <p data-i18n="contact.response.step3.desc">Ti rispondiamo con un confronto chiaro, utile per orientare il passo successivo in modo serio e concreto.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner" data-reveal>
+          <div>
+            <span class="section-kicker text-white-50" data-i18n="contact.final.kicker">Richiesta rapida</span>
+            <h2 data-i18n="contact.final.title">Preferisci un contatto diretto e veloce?</h2>
+            <p data-i18n="contact.final.lead">Scrivici su WhatsApp con foto e descrizione del caso: e il modo piu rapido per iniziare una valutazione.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank" data-i18n="contact.final.cta1">Apri WhatsApp</a>
+            <a href="#contact-form" class="btn btn-outline-light btn-lg fw-bold" data-i18n="contact.final.cta2">Compila il modulo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer-section text-white py-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
           <h5 class="fw-bold">WEMARINE</h5>
-          <p class="mb-1 text-white-50">Sede: Inserisci indirizzo</p>
-          <p class="mb-1 text-white-50">Email: info@wemarine.it</p>
-          <p class="mb-0 text-white-50">Tel: +39 XXX XXX XXXX</p>
+          <p class="mb-1 text-white-50"><span data-i18n="footer.locationLabel">Sede</span>: <span data-i18n="footer.locationValue">Inserisci indirizzo</span></p>
+          <p class="mb-1 text-white-50"><span data-i18n="footer.emailLabel">Email</span>: info@wemarine.it</p>
+          <p class="mb-0 text-white-50"><span data-i18n="footer.phoneLabel">Tel</span>: +39 XXX XXX XXXX</p>
         </div>
 
         <div class="col-md-4">
-          <h5 class="fw-bold">Link rapidi</h5>
+          <h5 class="fw-bold" data-i18n="footer.quickLinks">Link rapidi</h5>
           <ul class="list-unstyled mb-0">
-            <li><a href="../index.html" class="footer-link">Home</a></li>
-            <li><a href="./service.html" class="footer-link">Servizi</a></li>
-            <li><a href="./about.html" class="footer-link">Chi siamo</a></li>
-            <li><a href="./contact.html" class="footer-link">Contatti</a></li>
+            <li><a href="../index.html" class="footer-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="./service.html" class="footer-link" data-i18n="nav.services">Servizi</a></li>
+            <li><a href="./about.html" class="footer-link" data-i18n="nav.about">Chi siamo</a></li>
+            <li><a href="./contact.html" class="footer-link" data-i18n="nav.contacts">Contatti</a></li>
           </ul>
         </div>
 
         <div class="col-md-4">
-          <h5 class="fw-bold">Seguici</h5>
+          <h5 class="fw-bold" data-i18n="footer.follow">Seguici</h5>
           <div class="d-flex gap-3">
             <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -237,15 +401,13 @@
       <hr class="border-secondary my-4">
 
       <div class="text-center text-white-50">
-        <small>&copy; <span id="year"></span> WEMARINE. Tutti i diritti riservati.</small>
+        <small>&copy; <span id="year"></span> <span data-i18n="footer.rights">WEMARINE. Tutti i diritti riservati.</span></small>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-  <!-- Custom JS -->
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
