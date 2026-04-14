@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WEMARINE - Servizi</title>
+  <title>WEMARINE - Servizi Premium per Tubolari e Refit Nautico</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
@@ -14,6 +14,27 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
   <div class="container navbar-custom">
+
+    <div class="dropdown language-switcher language-switcher-mobile d-lg-none">
+      <button class="btn btn-outline-light btn-sm fw-semibold language-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-language"></i>
+        <span data-lang-current>IT</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-start language-menu">
+        <li>
+          <button class="dropdown-item" type="button" data-lang-option="it">
+            <span class="language-option-code">IT</span>
+            <span data-i18n="lang.italian">Italiano</span>
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item" type="button" data-lang-option="en">
+            <span class="language-option-code">EN</span>
+            <span data-i18n="lang.english">English</span>
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <a class="navbar-brand fw-bold" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
@@ -100,20 +121,6 @@
       </li>
     </ul>
 
-    <div class="language-mobile-panel">
-      <span class="language-mobile-label" data-i18n="lang.label">Lingua</span>
-      <div class="language-mobile-options">
-        <button class="language-mobile-btn" type="button" data-lang-option="it">
-          <span class="language-option-code">IT</span>
-          <span data-i18n="lang.italian">Italiano</span>
-        </button>
-        <button class="language-mobile-btn" type="button" data-lang-option="en">
-          <span class="language-option-code">EN</span>
-          <span data-i18n="lang.english">English</span>
-        </button>
-      </div>
-    </div>
-
     <div class="mt-auto d-grid gap-2">
       <a class="btn btn-light fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
         Richiedi preventivo
@@ -131,10 +138,10 @@
       <div class="page-header-grid"></div>
       <div class="container position-relative">
         <div class="page-header-content" data-reveal>
-          <span class="section-kicker text-white-50" data-i18n="services.hero.kicker">Servizi nautici specializzati</span>
-          <h1 data-i18n="services.hero.title">Servizi dedicati ai tubolari per gommoni e imbarcazioni pneumatiche.</h1>
+          <span class="section-kicker text-white-50" data-i18n="services.hero.kicker">Produzione, retubing e refit per la nautica di alta gamma</span>
+          <h1 data-i18n="services.hero.title">Servizi dedicati ai tubolari premium per gommoni e imbarcazioni pneumatiche.</h1>
           <p class="lead mb-0" data-i18n="services.hero.lead">
-            Riparazioni, sostituzioni, retubing, refit e lavorazioni su misura per riportare il mezzo a condizioni affidabili, ordinate e adatte al suo impiego.
+            Realizziamo interventi su misura che uniscono precisione tecnica, qualità dei materiali ed estetica raffinata, dalla riparazione specialistica al retubing e al refit completo.
           </p>
         </div>
       </div>
@@ -145,7 +152,7 @@
         <div class="row g-4 align-items-center">
           <div class="col-lg-7" data-reveal>
             <span class="section-kicker" data-i18n="services.overview.kicker">Panoramica servizi</span>
-            <h2 data-i18n="services.overview.title">Ogni intervento ha un perimetro preciso, una logica tecnica e un obiettivo chiaro.</h2>
+            <h2 data-i18n="services.overview.title">Ogni intervento nasce da una visione precisa: performance, durata e immagine del mezzo.</h2>
             <p class="section-intro" data-i18n="services.overview.lead">
               Analizziamo lo stato del tubolare, il contesto d'uso dell'imbarcazione e le esigenze del cliente per proporre una soluzione concreta, proporzionata e tecnicamente sensata.
             </p>
@@ -162,7 +169,7 @@
               </div>
               <div class="info-panel-item">
                 <strong data-i18n="services.overview.info3.label">Obiettivo</strong>
-                <span data-i18n="services.overview.info3.value">Migliorare sicurezza, durata, funzionalita e resa complessiva del mezzo</span>
+                <span data-i18n="services.overview.info3.value">Migliorare sicurezza, durata, funzionalità e resa complessiva del mezzo</span>
               </div>
             </div>
           </div>
@@ -197,7 +204,7 @@
               <div class="feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
               <span class="service-chip" data-i18n="services.cards.retubing.tag">Retubing</span>
             </div>
-            <h3 data-i18n="services.cards.retubing.title">Retubing progettato per aggiornare il mezzo in chiave tecnica ed estetica</h3>
+            <h3 data-i18n="services.cards.retubing.title">Retubing progettato per elevare il mezzo in chiave tecnica ed estetica</h3>
             <p data-i18n="services.cards.retubing.desc">Un intervento che non si limita a sostituire, ma ridefinisce il rapporto tra prestazione, immagine e identità dell'imbarcazione.</p>
           </article>
 
@@ -235,7 +242,7 @@
               <article class="process-card">
                 <span>01</span>
                 <h3 data-i18n="services.process.card1.title">Raccolta informazioni</h3>
-                <p data-i18n="services.process.card1.desc">Foto, condizioni del mezzo e priorita del cliente.</p>
+                <p data-i18n="services.process.card1.desc">Foto, condizioni del mezzo e priorità del cliente.</p>
               </article>
               <article class="process-card">
                 <span>02</span>
@@ -250,7 +257,7 @@
               <article class="process-card">
                 <span>04</span>
                 <h3 data-i18n="services.process.card4.title">Verifica finale</h3>
-                <p data-i18n="services.process.card4.desc">Controllo conclusivo prima della consegna o del rientro in operativita.</p>
+                <p data-i18n="services.process.card4.desc">Controllo conclusivo prima della consegna o del rientro in operatività.</p>
               </article>
             </div>
           </div>
@@ -308,7 +315,7 @@
             <span class="section-kicker" data-i18n="services.portfolio.kicker">Portfolio filtrabile</span>
             <h2 data-i18n="services.portfolio.title">Alcuni esempi di lavorazioni eseguite su tubolari e gommoni.</h2>
             <p class="section-intro" data-i18n="services.portfolio.lead">
-              Una raccolta di interventi che aiuta a capire il tipo di attivita che svolgiamo, dal recupero di danni localizzati al rinnovo completo del mezzo.
+              Una raccolta di interventi che aiuta a capire il tipo di attività che svolgiamo, dal recupero di danni localizzati al rinnovo completo del mezzo.
             </p>
           </div>
           <div class="col-lg-5" data-reveal>
@@ -346,7 +353,7 @@
             <div class="portfolio-card-body">
               <span class="portfolio-tag" data-i18n="services.portfolio.card3.tag">Refit</span>
               <h3 data-i18n="services.portfolio.card3.title">Refit completo per rinnovare immagine e ordine del mezzo</h3>
-              <p data-i18n="services.portfolio.card3.desc">Un intervento orientato a migliorare finiture, pulizia formale e qualita percepita del gommone.</p>
+              <p data-i18n="services.portfolio.card3.desc">Un intervento orientato a migliorare finiture, pulizia formale e qualità percepita del gommone.</p>
             </div>
           </article>
 
@@ -355,7 +362,7 @@
             <div class="portfolio-card-body">
               <span class="portfolio-tag" data-i18n="services.portfolio.card4.tag">Dettagli</span>
               <h3 data-i18n="services.portfolio.card4.title">Precisione nei raccordi e nelle finiture</h3>
-              <p data-i18n="services.portfolio.card4.desc">Dettagli tecnici che aumentano la qualita percepita del risultato finale.</p>
+              <p data-i18n="services.portfolio.card4.desc">Dettagli tecnici che aumentano la qualità percepita del risultato finale.</p>
             </div>
           </article>
         </div>
@@ -367,7 +374,7 @@
         <div class="cta-banner-inner" data-reveal>
           <div>
             <span class="section-kicker text-white-50" data-i18n="services.final.kicker">CTA distribuita</span>
-            <h2 data-i18n="services.final.title">Hai bisogno di un intervento o vuoi capire quale servizio e più adatto?</h2>
+            <h2 data-i18n="services.final.title">Vuoi capire quale intervento valorizza davvero la tua imbarcazione?</h2>
             <p data-i18n="services.final.lead">Scrivici con foto e dettagli del mezzo: riceverai una prima indicazione chiara sul percorso più sensato.</p>
           </div>
           <div class="cta-banner-actions">
@@ -422,3 +429,10 @@
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+

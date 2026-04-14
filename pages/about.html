@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -13,6 +13,27 @@
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
   <div class="container navbar-custom">
+
+    <div class="dropdown language-switcher language-switcher-mobile d-lg-none">
+      <button class="btn btn-outline-light btn-sm fw-semibold language-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-language"></i>
+        <span data-lang-current>IT</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-start language-menu">
+        <li>
+          <button class="dropdown-item" type="button" data-lang-option="it">
+            <span class="language-option-code">IT</span>
+            <span data-i18n="lang.italian">Italiano</span>
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item" type="button" data-lang-option="en">
+            <span class="language-option-code">EN</span>
+            <span data-i18n="lang.english">English</span>
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <a class="navbar-brand fw-bold" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
@@ -99,20 +120,6 @@
       </li>
     </ul>
 
-    <div class="language-mobile-panel">
-      <span class="language-mobile-label" data-i18n="lang.label">Lingua</span>
-      <div class="language-mobile-options">
-        <button class="language-mobile-btn" type="button" data-lang-option="it">
-          <span class="language-option-code">IT</span>
-          <span data-i18n="lang.italian">Italiano</span>
-        </button>
-        <button class="language-mobile-btn" type="button" data-lang-option="en">
-          <span class="language-option-code">EN</span>
-          <span data-i18n="lang.english">English</span>
-        </button>
-      </div>
-    </div>
-
     <div class="mt-auto d-grid gap-2">
       <a class="btn btn-light fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
         Richiedi preventivo
@@ -130,10 +137,10 @@
       <div class="page-header-grid"></div>
       <div class="container position-relative">
         <div class="page-header-content" data-reveal>
-          <span class="section-kicker text-white-50" data-i18n="about.hero.kicker">Identità e credibilità</span>
-          <h1 data-i18n="about.hero.title">We Marine: competenza specifica negli interventi su tubolari e imbarcazioni pneumatiche.</h1>
+          <span class="section-kicker text-white-50" data-i18n="about.hero.kicker">Identità, esperienza e posizionamento</span>
+          <h1 data-i18n="about.hero.title">WEMARINE: oltre 20 anni di esperienza nei tubolari per gommoni e imbarcazioni pneumatiche.</h1>
           <p class="lead mb-0" data-i18n="about.hero.lead">
-            Lavoriamo con un approccio tecnico e diretto, offrendo soluzioni su misura per privati, aziende e operatori del settore nautico.
+            Realizziamo soluzioni su misura per armatori e professionisti che ricercano qualità senza compromessi, affidabilità, prestazioni e un'estetica coerente con la nautica di alta gamma.
           </p>
         </div>
       </div>
@@ -144,18 +151,18 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-reveal>
             <span class="section-kicker" data-i18n="about.identity.kicker">Identità</span>
-            <h2 data-i18n="about.identity.title">We Marine nasce da un focus preciso: lavorare bene su tubolari, senza disperdersi nel generico.</h2>
+            <h2 data-i18n="about.identity.title">WEMARINE nasce da un focus preciso: produrre e rinnovare tubolari con un approccio sartoriale.</h2>
             <p class="section-intro" data-i18n="about.identity.lead">
-              Ci occupiamo di riparazione, sostituzione, retubing e refit dei tubolari con attenzione a funzionalita, durata e cura del dettaglio. Ogni intervento viene impostato per rispondere a esigenze reali, non a soluzioni standard.
+              Ci occupiamo di produzione, riparazione, sostituzione, retubing e refit dei tubolari con attenzione a funzionalità, durata, design e cura del dettaglio. Ogni intervento viene costruito per valorizzare il mezzo, non per applicare una soluzione standard.
             </p>
             <div class="story-grid">
               <article class="story-card">
                 <h3 data-i18n="about.identity.card1.title">Specializzazione</h3>
-                <p data-i18n="about.identity.card1.desc">Concentrare il lavoro sui tubolari significa costruire un linguaggio tecnico piu credibile e un servizio piu riconoscibile.</p>
+                <p data-i18n="about.identity.card1.desc">Concentrare il lavoro sui tubolari significa costruire un linguaggio tecnico più credibile e un servizio più riconoscibile.</p>
               </article>
               <article class="story-card">
-                <h3 data-i18n="about.identity.card2.title">Approccio diretto</h3>
-                <p data-i18n="about.identity.card2.desc">Ogni intervento viene letto per quello che è, evitando promesse vaghe o lavorazioni inutili.</p>
+                <h3 data-i18n="about.identity.card2.title">Approccio sartoriale</h3>
+                <p data-i18n="about.identity.card2.desc">Ogni intervento viene definito per quello che il mezzo richiede davvero, con materiali, finiture e soluzioni coerenti con il progetto.</p>
               </article>
             </div>
           </div>
@@ -175,7 +182,7 @@
           <span class="section-kicker" data-i18n="about.values.kicker">Punti di forza</span>
           <h2 data-i18n="about.values.title">I valori che guidano il nostro modo di lavorare ogni giorno.</h2>
           <p data-i18n="about.values.lead">
-            Metodo, attenzione tecnica, ascolto del cliente e cura dell'esecuzione sono alla base di ogni lavorazione, dal piccolo intervento al rinnovo piu completo.
+            Esperienza, artigianalità evoluta, attenzione tecnica e cura dell'esecuzione sono alla base di ogni lavorazione, dal singolo intervento al rinnovo più completo.
           </p>
         </div>
 
@@ -205,7 +212,7 @@
             <article class="identity-card">
               <i class="fa-solid fa-gem"></i>
               <h3 data-i18n="about.values.card4.title">Risultato curato</h3>
-              <p data-i18n="about.values.card4.desc">Il lavoro deve apparire solido, ordinato e coerente con un contesto professionale.</p>
+              <p data-i18n="about.values.card4.desc">Il lavoro deve apparire solido, ordinato, distintivo e coerente con un contesto nautico di livello.</p>
             </article>
           </div>
         </div>
@@ -219,7 +226,7 @@
             <span class="section-kicker text-white-50" data-i18n="about.process.kicker">Approccio al lavoro</span>
             <h2 class="text-white" data-i18n="about.process.title">Il nostro approccio parte dall'analisi del mezzo e arriva a una soluzione concreta.</h2>
             <p class="text-white-50 section-intro" data-i18n="about.process.lead">
-              Ogni lavorazione segue un percorso chiaro: valutiamo il caso, definiamo l'intervento piu corretto e lavoriamo con precisione fino al controllo finale.
+              Ogni lavorazione segue un percorso chiaro: analizziamo il caso, definiamo l'intervento più coerente e lavoriamo con precisione fino al controllo finale.
             </p>
           </div>
 
@@ -235,8 +242,8 @@
               <article class="timeline-item">
                 <span class="timeline-step">02</span>
                 <div>
-                  <h3 data-i18n="about.process.step2.title">Definiamo la scelta piu sensata</h3>
-                  <p data-i18n="about.process.step2.desc">Riparazione, sostituzione o refit devono essere soluzioni motivate, non automatismi.</p>
+                  <h3 data-i18n="about.process.step2.title">Definiamo la scelta più sensata</h3>
+                  <p data-i18n="about.process.step2.desc">Riparazione, sostituzione, retubing o refit devono essere soluzioni motivate, mai automatismi.</p>
                 </div>
               </article>
               <article class="timeline-item">
@@ -262,22 +269,22 @@
           </div>
           <div class="col-lg-6" data-reveal>
             <span class="section-kicker" data-i18n="about.focus.kicker">Valore percepito</span>
-            <h2 data-i18n="about.focus.title">Affidabilità, specializzazione e attenzione al cliente sono il centro del nostro lavoro.</h2>
+            <h2 data-i18n="about.focus.title">Affidabilità, specializzazione e cultura del dettaglio sono il centro del nostro lavoro.</h2>
             <p class="section-intro" data-i18n="about.focus.lead">
-              Lavoriamo per offrire un servizio serio, leggibile e concreto, in cui il cliente trova competenza tecnica, confronto chiaro e soluzioni costruite sul proprio mezzo.
+              Lavoriamo per offrire un servizio solido, riconoscibile e coerente con la nautica di prestigio, in cui il cliente trova competenza tecnica, confronto chiaro e soluzioni costruite sul proprio mezzo.
             </p>
             <div class="metric-strip">
               <div class="metric-strip-item">
                 <strong data-i18n="about.focus.item1.label">Focus</strong>
-                <span data-i18n="about.focus.item1.value">Tubolari, refit, lavorazioni su misura</span>
+                <span data-i18n="about.focus.item1.value">Tubolari, retubing, refit e lavorazioni su misura</span>
               </div>
               <div class="metric-strip-item">
                 <strong data-i18n="about.focus.item2.label">Tono</strong>
-                <span data-i18n="about.focus.item2.value">Tecnico, ordinato, professionale</span>
+                <span data-i18n="about.focus.item2.value">Tecnico, sartoriale, professionale</span>
               </div>
               <div class="metric-strip-item">
                 <strong data-i18n="about.focus.item3.label">Obiettivo</strong>
-                <span data-i18n="about.focus.item3.value">Trasmettere affidabilità e invito al contatto</span>
+                <span data-i18n="about.focus.item3.value">Trasmettere affidabilità, valore e invito al contatto</span>
               </div>
             </div>
           </div>
@@ -290,8 +297,8 @@
         <div class="cta-banner-inner" data-reveal>
           <div>
             <span class="section-kicker text-white-50" data-i18n="about.final.kicker">Contatto diretto</span>
-            <h2 data-i18n="about.final.title">Se vuoi parlare di un intervento, partiamo da immagini chiare e obiettivi concreti.</h2>
-            <p data-i18n="about.final.lead">Possiamo valutare insieme il caso e capire se serve una riparazione, un refit o una sostituzione piu profonda.</p>
+            <h2 data-i18n="about.final.title">Se vuoi valorizzare la tua imbarcazione, partiamo da immagini chiare e obiettivi concreti.</h2>
+            <p data-i18n="about.final.lead">Possiamo valutare insieme il caso e capire se serve una riparazione, un retubing, un refit o una sostituzione più profonda.</p>
           </div>
           <div class="cta-banner-actions">
             <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank" data-i18n="about.final.cta1">Scrivici su WhatsApp</a>
@@ -345,3 +352,17 @@
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

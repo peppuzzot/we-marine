@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WEMARINE - Contatti</title>
+  <title>WEMARINE - Contatti e Richieste</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
@@ -13,6 +13,27 @@
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-wemarine">
   <div class="container navbar-custom">
+
+    <div class="dropdown language-switcher language-switcher-mobile d-lg-none">
+      <button class="btn btn-outline-light btn-sm fw-semibold language-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-language"></i>
+        <span data-lang-current>IT</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-start language-menu">
+        <li>
+          <button class="dropdown-item" type="button" data-lang-option="it">
+            <span class="language-option-code">IT</span>
+            <span data-i18n="lang.italian">Italiano</span>
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item" type="button" data-lang-option="en">
+            <span class="language-option-code">EN</span>
+            <span data-i18n="lang.english">English</span>
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <a class="navbar-brand fw-bold" href="../index.html">
       <img class="logo" src="../assets/img/logo-web-bianco.png" alt="We Marine">
@@ -99,20 +120,6 @@
       </li>
     </ul>
 
-    <div class="language-mobile-panel">
-      <span class="language-mobile-label" data-i18n="lang.label">Lingua</span>
-      <div class="language-mobile-options">
-        <button class="language-mobile-btn" type="button" data-lang-option="it">
-          <span class="language-option-code">IT</span>
-          <span data-i18n="lang.italian">Italiano</span>
-        </button>
-        <button class="language-mobile-btn" type="button" data-lang-option="en">
-          <span class="language-option-code">EN</span>
-          <span data-i18n="lang.english">English</span>
-        </button>
-      </div>
-    </div>
-
     <div class="mt-auto d-grid gap-2">
       <a class="btn btn-light fw-semibold" href="./contact.html#contact-form" data-i18n="nav.quote">
         Richiedi preventivo
@@ -131,9 +138,9 @@
       <div class="container position-relative">
         <div class="page-header-content" data-reveal>
           <span class="section-kicker text-white-50" data-i18n="contact.hero.kicker">Contatto diretto</span>
-          <h1 data-i18n="contact.hero.title">Parliamo del tuo intervento su tubolari, refit o lavorazioni su misura.</h1>
+          <h1 data-i18n="contact.hero.title">Parliamo del tuo progetto su tubolari, retubing, refit o lavorazioni su misura.</h1>
           <p class="lead mb-0" data-i18n="contact.hero.lead">
-            Se hai bisogno di una riparazione, di una sostituzione completa o di una valutazione tecnica, puoi contattarci per ricevere un confronto chiaro e una prima indicazione operativa.
+            Se hai bisogno di una riparazione specialistica, di una sostituzione completa o di una valutazione tecnica per un progetto premium, contattaci per ricevere un confronto chiaro e una prima indicazione operativa.
           </p>
         </div>
       </div>
@@ -148,15 +155,15 @@
           </div>
           <div class="trust-item">
             <i class="fa-solid fa-file-circle-check"></i>
-            <span data-i18n="contact.trust.two">Valutazioni iniziali basate su foto, dettagli del mezzo e obiettivo dell'intervento</span>
+            <span data-i18n="contact.trust.two">Valutazioni iniziali basate su foto, dettagli del mezzo e obiettivo del progetto</span>
           </div>
           <div class="trust-item">
             <i class="fa-solid fa-sailboat"></i>
-            <span data-i18n="contact.trust.three">Supporto per privati, cantieri, aziende e operatori del settore nautico</span>
+            <span data-i18n="contact.trust.three">Supporto per armatori, cantieri, aziende e operatori del settore nautico</span>
           </div>
           <div class="trust-item">
             <i class="fa-solid fa-earth-europe"></i>
-            <span data-i18n="contact.trust.four">Disponibilita per lavorazioni e forniture anche in contesti extra-locali</span>
+            <span data-i18n="contact.trust.four">Disponibilità per lavorazioni e forniture anche in contesti extra-locali e internazionali</span>
           </div>
         </div>
       </div>
@@ -167,9 +174,9 @@
         <div class="row g-5 align-items-start">
           <div class="col-lg-5" data-reveal>
             <span class="section-kicker" data-i18n="contact.direct.kicker">Come contattarci</span>
-            <h2 data-i18n="contact.direct.title">Un canale diretto per richieste rapide e una sezione contatti più completa.</h2>
+            <h2 data-i18n="contact.direct.title">Un canale diretto per richieste rapide e una sezione contatti completa.</h2>
             <p class="section-intro" data-i18n="contact.direct.lead">
-              Possiamo aiutarti a capire se conviene intervenire con una riparazione, con una sostituzione o con un refit. Per una prima valutazione sono utili foto chiare, modello del mezzo e una breve descrizione del problema o del risultato desiderato.
+              Possiamo aiutarti a capire se il percorso corretto è una riparazione, una sostituzione, un retubing o un refit. Per una prima valutazione sono utili foto chiare, modello del mezzo e una breve descrizione del risultato desiderato.
             </p>
 
             <div class="contact-direct-stack">
@@ -203,8 +210,8 @@
               <article class="contact-direct-card">
                 <div class="contact-direct-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
-                  <h3 data-i18n="contact.direct.location.title">Operativita</h3>
-                  <p data-i18n="contact.direct.location.desc">Supporto per clienti privati e aziende, con possibilita di gestire lavorazioni e forniture anche in Europa.</p>
+                  <h3 data-i18n="contact.direct.location.title">Operatività</h3>
+                  <p data-i18n="contact.direct.location.desc">Supporto per clienti privati e aziende, con possibilità di gestire lavorazioni e forniture anche in Europa.</p>
                   <strong data-i18n="contact.direct.location.value">Base operativa da definire</strong>
                 </div>
               </article>
@@ -215,9 +222,9 @@
             <div class="contact-form-shell" id="contact-form">
               <div class="contact-form-header">
                 <span class="section-kicker" data-i18n="contact.form.kicker">Richiesta informazioni</span>
-                <h2 data-i18n="contact.form.title">Invia la tua richiesta e raccontaci di cosa hai bisogno.</h2>
+                <h2 data-i18n="contact.form.title">Invia la tua richiesta e raccontaci il progetto che hai in mente.</h2>
                 <p data-i18n="contact.form.lead">
-                  Compila il modulo con i dati principali. Se hai già foto o dettagli tecnici del mezzo, descrivili nel messaggio: ci aiuteranno a darti una risposta più utile e veloce.
+                  Compila il modulo con i dati principali. Se hai già foto o dettagli tecnici del mezzo, descrivili nel messaggio: ci aiuteranno a darti una risposta più utile, precisa e veloce.
                 </p>
               </div>
 
@@ -257,7 +264,7 @@
 
                   <div class="col-md-6">
                     <label class="form-label" for="contact-area" data-i18n="contact.form.areaLabel">Area o provenienza</label>
-                    <input id="contact-area" type="text" class="form-control" placeholder="Citta, zona o paese" data-i18n-placeholder="contact.form.areaPlaceholder">
+                    <input id="contact-area" type="text" class="form-control" placeholder="Città, zona o Paese" data-i18n-placeholder="contact.form.areaPlaceholder">
                   </div>
 
                   <div class="col-12">
@@ -267,7 +274,7 @@
 
                   <div class="col-12">
                     <div class="contact-form-note" data-i18n="contact.form.note">
-                      Per una valutazione più precisa, indica se si tratta di riparazione, sostituzione, refit o richiesta professionale e aggiungi più dettagli possibile.
+                      Per una valutazione più precisa, indica se si tratta di riparazione, sostituzione, retubing, refit o richiesta professionale e aggiungi più dettagli possibile.
                     </div>
                   </div>
 
@@ -297,13 +304,13 @@
             <span class="section-kicker" data-i18n="contact.support.kicker">Quando contattarci</span>
             <h2 data-i18n="contact.support.title">Possiamo supportarti sia per un problema specifico sia per un progetto più ampio.</h2>
             <p class="section-intro" data-i18n="contact.support.lead">
-              Possiamo intervenire in situazioni diverse: dalla perdita localizzata al rinnovo completo del tubolare, fino a richieste dedicate per aziende, cantieri e professionisti del settore.
+              Possiamo intervenire in situazioni diverse: dalla perdita localizzata al rinnovo completo del tubolare, fino a richieste dedicate per armatori, cantieri e professionisti del settore.
             </p>
 
             <div class="check-list">
-              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li1">Riparazione di danni, usura o criticita localizzate</span></div>
-              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li2">Sostituzione completa dei tubolari o retubing</span></div>
-              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li3">Refit estetico e lavorazioni su misura</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li1">Riparazione di danni, usura o criticità localizzate</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li2">Sostituzione completa dei tubolari o retubing premium</span></div>
+              <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li3">Refit estetico, rinnovamento completo e lavorazioni su misura</span></div>
               <div><i class="fa-solid fa-check"></i><span data-i18n="contact.support.li4">Richieste da cantieri, aziende, flotte o operatori del settore</span></div>
             </div>
           </div>
@@ -357,7 +364,7 @@
           <div>
             <span class="section-kicker text-white-50" data-i18n="contact.final.kicker">Richiesta rapida</span>
             <h2 data-i18n="contact.final.title">Preferisci un contatto diretto e veloce?</h2>
-            <p data-i18n="contact.final.lead">Scrivici su WhatsApp con foto e descrizione del caso: e il modo più rapido per iniziare una valutazione.</p>
+            <p data-i18n="contact.final.lead">Scrivici su WhatsApp con foto e descrizione del caso: è il modo più rapido per iniziare una valutazione precisa.</p>
           </div>
           <div class="cta-banner-actions">
             <a href="https://wa.me/39XXXXXXXXXX" class="btn btn-light btn-lg fw-bold" target="_blank" data-i18n="contact.final.cta1">Apri WhatsApp</a>
@@ -411,3 +418,17 @@
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

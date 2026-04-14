@@ -277,6 +277,13 @@ p {
   letter-spacing: 0.08em;
 }
 
+.language-switcher-mobile {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  padding-left: 1rem
+}
+
 @media (min-width: 992px) {
   .navbar-custom {
     display: flex;
@@ -396,50 +403,6 @@ p {
 .sidebar-mobile .btn {
   border-radius: 12px;
   padding: 0.9rem 1rem;
-}
-
-.language-mobile-panel {
-  width: 100%;
-}
-
-.language-mobile-label {
-  display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.62);
-  margin-bottom: 0.75rem;
-}
-
-.language-mobile-options {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.language-mobile-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffffff;
-  padding: 0.8rem 0.9rem;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.language-mobile-btn .language-option-code {
-  background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
-}
-
-.language-mobile-btn.is-active,
-.language-mobile-btn:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.24);
 }
 
 .sidebar-mobile .offcanvas-body > .mt-auto {
@@ -1513,6 +1476,23 @@ p {
 
   .navbar-brand .logo {
     height: 50px;
+  }
+
+  .language-switcher-mobile .btn {
+    min-height: 40px;
+    padding: 0.55rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    gap: 0.4rem;
+  }
+
+  .language-switcher-mobile .btn i {
+    display: none;
+  }
+
+  .language-switcher-mobile .language-menu {
+    min-width: 156px;
+    margin-top: 0.55rem;
   }
 
   .navbar-toggler {
