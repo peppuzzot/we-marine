@@ -1359,6 +1359,38 @@ p {
   border: 1px solid rgba(11, 42, 74, 0.08);
 }
 
+.contact-form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form-feedback {
+  display: none;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.contact-form-feedback.is-visible {
+  display: block;
+}
+
+.contact-form-feedback.is-success {
+  color: #0f5132;
+  background: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.contact-form-feedback.is-error {
+  color: #842029;
+  background: #f8d7da;
+  border-color: #f5c2c7;
+}
+
 .footer-section {
   background-color: #111827;
   color: #c4cbd4;

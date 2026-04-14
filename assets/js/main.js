@@ -97,6 +97,89 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function initContactForm() {
+    const form = document.getElementById("contact-request-form");
+
+    if (!form || typeof window.fetch !== "function") return;
+
+    const feedback = form.querySelector("[data-contact-feedback]");
+    const submitButton = form.querySelector('button[type="submit"]');
+    const defaultSubmitLabel = submitButton?.dataset.submitLabel || submitButton?.textContent?.trim() || "Invia";
+    const loadingSubmitLabel = submitButton?.dataset.submitLoading || "Invio in corso...";
+
+    function setFeedback(message, type) {
+      if (!feedback) return;
+
+      feedback.textContent = message;
+      feedback.classList.add("is-visible");
+      feedback.classList.toggle("is-success", type === "success");
+      feedback.classList.toggle("is-error", type === "error");
+    }
+
+    function clearFeedback() {
+      if (!feedback) return;
+
+      feedback.textContent = "";
+      feedback.classList.remove("is-visible", "is-success", "is-error");
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    const message = params.get("message");
+
+    if (status && message) {
+      setFeedback(message, status === "success" ? "success" : "error");
+      params.delete("status");
+      params.delete("message");
+      const nextQuery = params.toString();
+      const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ""}${window.location.hash}`;
+      window.history.replaceState({}, "", nextUrl);
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      clearFeedback();
+
+      if (!form.reportValidity()) return;
+
+      const formData = new FormData(form);
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = loadingSubmitLabel;
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "Si e verificato un errore durante l'invio.");
+        }
+
+        form.reset();
+        setFeedback(result.message || "Richiesta inviata con successo.", "success");
+      } catch (error) {
+        setFeedback(
+          error.message || "Non siamo riusciti a inviare la richiesta. Riprova tra poco.",
+          "error"
+        );
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = defaultSubmitLabel;
+        }
+      }
+    });
+  }
+
   const yearTarget = document.getElementById("year");
   if (yearTarget) {
     yearTarget.textContent = new Date().getFullYear();
@@ -105,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   handleNavbarScroll();
   initReveal();
   initPortfolioFilters();
+  initContactForm();
 
   window.addEventListener("scroll", handleNavbarScroll);
 });
