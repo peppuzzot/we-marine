@@ -1,6 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar-wemarine");
   const scrollThreshold = 85;
+  const mobileSidebar = document.getElementById("mobileSidebar");
+  const root = document.documentElement;
+  const lockedScrollClass = "offcanvas-open";
+
+  function preventBackgroundScroll(event) {
+    if (event.target.closest("#mobileSidebar")) return;
+    event.preventDefault();
+  }
+
+  function lockBackgroundScroll() {
+    root.classList.add(lockedScrollClass);
+    document.body.classList.add(lockedScrollClass);
+    document.addEventListener("touchmove", preventBackgroundScroll, { passive: false });
+    document.addEventListener("wheel", preventBackgroundScroll, { passive: false });
+  }
+
+  function unlockBackgroundScroll() {
+    root.classList.remove(lockedScrollClass);
+    document.body.classList.remove(lockedScrollClass);
+    document.removeEventListener("touchmove", preventBackgroundScroll);
+    document.removeEventListener("wheel", preventBackgroundScroll);
+  }
+
+  if (mobileSidebar) {
+    mobileSidebar.addEventListener("show.bs.offcanvas", lockBackgroundScroll);
+    mobileSidebar.addEventListener("hidden.bs.offcanvas", unlockBackgroundScroll);
+  }
 
   function handleNavbarScroll() {
     if (!navbar) return;
