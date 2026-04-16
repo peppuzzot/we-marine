@@ -1,0 +1,12 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^pages/contact\.html$ /contatti [R=301,L]
+RewriteRule ^pages/service\.html$ /servizi [R=301,L]
+RewriteRule ^pages/about\.html$ /chi-siamo [R=301,L]
+
+RewriteRule ^contatti/?$ pages/contact.html [L]
+RewriteRule ^servizi/?$ pages/service.html [L]
+RewriteRule ^chi-siamo/?$ pages/about.html [L]
