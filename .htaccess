@@ -2,9 +2,16 @@ DirectoryIndex index.html
 
 RewriteEngine On
 
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[\s?]|$) [NC]
 RewriteRule ^index\.html$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+pages/contact\.html(?:[\s?]|$) [NC]
 RewriteRule ^pages/contact\.html$ /contatti [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+pages/service\.html(?:[\s?]|$) [NC]
 RewriteRule ^pages/service\.html$ /servizi [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+pages/about\.html(?:[\s?]|$) [NC]
 RewriteRule ^pages/about\.html$ /chi-siamo [R=301,L]
 
 RewriteRule ^contatti/?$ pages/contact.html [L]

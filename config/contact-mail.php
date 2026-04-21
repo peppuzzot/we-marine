@@ -11,7 +11,7 @@ return [
     ],
     'mail' => [
         'from_address' => 'info@tuodominio.it',
-        'from_name' => 'WEMARINE',
+        'from_name' => 'FORM WEMARINE',
         'to_address' => 'info@tuodominio.it',
         'to_name' => 'WEMARINE',
         'subject_prefix' => 'Nuova richiesta dal sito',
