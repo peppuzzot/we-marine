@@ -8,12 +8,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 require __DIR__ . '/vendor/autoload.php';
 
 $config = require __DIR__ . '/config/contact-mail.php';
-$localConfigPath = __DIR__ . '/config/contact-mail.local.php';
-
-if (file_exists($localConfigPath)) {
-    $localConfig = require $localConfigPath;
-    $config = array_replace_recursive($config, is_array($localConfig) ? $localConfig : []);
-}
 
 function wantsJsonResponse(): bool
 {
