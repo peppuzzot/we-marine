@@ -1066,15 +1066,15 @@ p {
 }
 
 .page-hero-service::before {
-  background: url("../img/foto-2.png") center center / cover no-repeat;
+  background: url("../img/tubolare-2/tub10.jpg") center center / cover no-repeat;
 }
 
 .page-hero-about::before {
-  background: url("../img/foto-3.png") center center / cover no-repeat;
+  background: url("../img/tubolare-3/tub17.jpg") center center / cover no-repeat;
 }
 
 .page-hero-contact::before {
-  background: url("../img/foto-4.png") center center / cover no-repeat;
+  background: url("../img/tubolare-3/tub20.jpg") center center / cover no-repeat;
 }
 
 .page-header-overlay {
