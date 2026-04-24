@@ -705,6 +705,50 @@ p {
   color: var(--primary);
 }
 
+.orca-showcase {
+  padding: 2rem 0 1rem;
+}
+
+.orca-showcase-card {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(232, 240, 247, 0.96) 100%);
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  padding: 1.35rem;
+  box-shadow: var(--shadow-md);
+}
+
+.orca-showcase-media {
+  margin: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: #ffffff;
+  min-height: 320px;
+}
+
+.orca-showcase-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.orca-showcase-copy {
+  padding: 0.5rem 0.75rem;
+}
+
+.orca-showcase-copy h2 {
+  max-width: 12ch;
+}
+
+.orca-showcase-copy p {
+  margin-top: 1.15rem;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
 .service-feature-card,
 .service-detail-card,
 .value-card,
@@ -1637,6 +1681,22 @@ p {
   .trust-band-inner,
   .cta-banner-inner {
     grid-template-columns: 1fr;
+  }
+
+  .orca-showcase {
+    padding-top: 1.5rem;
+  }
+
+  .orca-showcase-card {
+    padding: 1rem;
+  }
+
+  .orca-showcase-copy {
+    padding: 0.25rem 0;
+  }
+
+  .orca-showcase-copy h2 {
+    max-width: none;
   }
 
   .whatsapp-card {
