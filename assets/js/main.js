@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileSidebar = document.getElementById("mobileSidebar");
   const root = document.documentElement;
   const lockedScrollClass = "offcanvas-open";
+  let savedScrollY = 0;
 
   function preventBackgroundScroll(event) {
     if (event.target.closest("#mobileSidebar")) return;
@@ -11,8 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function lockBackgroundScroll() {
+    savedScrollY = window.scrollY || window.pageYOffset || 0;
     root.classList.add(lockedScrollClass);
     document.body.classList.add(lockedScrollClass);
+    document.body.style.top = `-${savedScrollY}px`;
     document.addEventListener("touchmove", preventBackgroundScroll, { passive: false });
     document.addEventListener("wheel", preventBackgroundScroll, { passive: false });
   }
@@ -20,8 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function unlockBackgroundScroll() {
     root.classList.remove(lockedScrollClass);
     document.body.classList.remove(lockedScrollClass);
+    document.body.style.top = "";
     document.removeEventListener("touchmove", preventBackgroundScroll);
     document.removeEventListener("wheel", preventBackgroundScroll);
+    window.scrollTo(0, savedScrollY);
   }
 
   if (mobileSidebar) {
